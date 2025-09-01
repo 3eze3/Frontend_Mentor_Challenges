@@ -1,6 +1,5 @@
 # **Frontend Mentor Challenges**
 
-Welcome! 👋  
 This repository contains my solutions to various **Frontend Mentor** challenges. These are categorized by difficulty — from **Noob** to **Advanced** — and currently include over **68 projects**.
 
 This repo serves as a personal journey and learning resource. My goal is to improve my front-end development skills by building real-world components and layouts. I’m also exploring creative animation techniques and refining my ability to build **pixel-perfect** user interfaces.
