@@ -1,0 +1,72 @@
+@mixin mobile($query) {
+	& {
+		@media (width <= $query) {
+			@content;
+		}
+	}
+}
+
+@mixin flex($aling: center, $justify: center, $direction: column, $gap: 2rem) {
+	& {
+		display: flex;
+		flex-direction: $direction;
+		align-items: $aling;
+		justify-content: $justify;
+		gap: $gap;
+	}
+}
+
+@mixin grid($columns: 4, $gap: 1.5rem) {
+	& {
+		display: grid;
+		grid-template-columns: repeat($columns, 1fr);
+		gap: $gap;
+	}
+}
+
+@mixin apply-theme($theme) {
+	background-color: map-get($theme, main-bg);
+
+	button {
+		background-color: map-get($theme, key-bg);
+		box-shadow: 0rem 0.3rem 0rem map-get($theme, key-sh);
+		&:active {
+			box-shadow: 0rem 0rem 0rem map-get($theme, key-sh);
+		}
+	}
+
+	.calculator__display {
+		background-color: map-get($theme, screen-bg);
+	}
+
+	.calculator__keypad {
+		background-color: map-get($theme, ligth-bg);
+	}
+
+	.calculator__number {
+		color: map-get($theme, text);
+	}
+
+	.calculator__number--remove,
+	.calculator__number--result {
+		color: #fff;
+	}
+
+	.calculator__buttons--remove {
+		background-color: map-get($theme, key-bg-remove);
+		box-shadow: 0rem 0.3rem 0rem map-get($theme, key-sh-remove);
+	}
+
+	.calculator__buttons--result {
+		background-color: map-get($theme, key-bg-toggle);
+		box-shadow: 0rem 0.3rem 0rem map-get($theme, key-sh-toggle);
+	}
+
+	.themes__radiogroup {
+		background-color: map-get($theme, ligth-bg);
+	}
+
+	.themes__slider {
+		background-color: map-get($theme, key-bg-toggle);
+	}
+}

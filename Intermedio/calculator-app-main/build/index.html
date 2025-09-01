@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/index.mjs"></script>
+
+		<title>Calculator app</title>
+	</head>
+	<body>
+		<!--  -->
+		<main class="main">
+			<header class="main__header header">
+				<h1 class="header__title">calc</h1>
+				<div class="themes">
+					<span class="themes__label" id="themes-label">THEME</span>
+					<div class="themes__wrapper">
+						<ul class="themes__numbers" id="themes-numbers">
+							<li class="themes__theme-label">1</li>
+							<li class="themes__theme-label">2</li>
+							<li class="themes__theme-label">3</li>
+						</ul>
+
+						<div
+							class="themes__radiogroup"
+							role="radiogroup"
+							aria-labelledby="themes-label"
+							aria-describedby="themes-numbers">
+							<input
+								class="themes__input"
+								type="radio"
+								id="theme-1"
+								name="theme"
+								value="theme-1"
+								aria-label="theme 1" />
+							<input
+								class="themes__input"
+								type="radio"
+								id="theme-2"
+								name="theme"
+								value="theme-2"
+								aria-label="theme 2" />
+							<input
+								class="themes__input"
+								type="radio"
+								id="theme-3"
+								name="theme"
+								value="theme-3"
+								aria-label="theme 3" />
+							<span class="themes__slider"></span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--  -->
+			<section class="calculator">
+				<h2 class="sr-only">Display calculator</h2>
+				<div class="calculator__display">
+					<div class="calculator__accumulate">
+						<span class="calculator__ans">Ans: 0</span>
+					</div>
+					<label for="screen" class="sr-only">Calculator display</label>
+					<input
+						type="text"
+						class="calculator__screen"
+						id="screen"
+						disabled
+						aria-label="Display" />
+				</div>
+				<fieldset class="calculator__keypad">
+					<legend class="sr-only">
+						Calculator keypad with numbers and operations
+					</legend>
+					<button type="button" class="calculator__buttons" value="7">
+						<span class="calculator__number">7</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="8">
+						<span class="calculator__number">8</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="9">
+						<span class="calculator__number">9</span>
+					</button>
+					<button
+						type="button"
+						class="calculator__buttons calculator__buttons--remove"
+						value="DEL">
+						<span class="calculator__number calculator__number--remove">
+							DEL
+						</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="4">
+						<span class="calculator__number">4</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="5">
+						<span class="calculator__number">5</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="6">
+						<span class="calculator__number">6</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="+">
+						<span class="calculator__number">+</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="1">
+						<span class="calculator__number">1</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="2">
+						<span class="calculator__number">2</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="3">
+						<span class="calculator__number">3</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="-">
+						<span class="calculator__number">-</span>
+					</button>
+					<button type="button" class="calculator__buttons" value=".">
+						<span class="calculator__number">.</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="0">
+						<span class="calculator__number">0</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="/">
+						<span class="calculator__number">/</span>
+					</button>
+					<button type="button" class="calculator__buttons" value="*">
+						<span class="calculator__number">x</span>
+					</button>
+					<button
+						type="button"
+						class="calculator__buttons calculator__buttons--ans"
+						value="ans">
+						<span class="calculator__number">Ans</span>
+					</button>
+					<button
+						type="button"
+						class="calculator__buttons calculator__buttons--remove calculator__buttons--reset"
+						value="RESET">
+						<span class="calculator__number calculator__number--remove">
+							RESET
+						</span>
+					</button>
+					<button
+						type="button"
+						class="calculator__buttons calculator__buttons--result"
+						value="=">
+						<span class="calculator__number calculator__number--result">=</span>
+					</button>
+				</fieldset>
+			</section>
+		</main>
+		<!--  -->
+	</body>
+</html>
