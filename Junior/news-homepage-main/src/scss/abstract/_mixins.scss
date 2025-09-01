@@ -1,0 +1,21 @@
+@mixin flex($align: center, $justify: center, $direction: column, $gap: 2rem) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+	gap: $gap;
+}
+
+@mixin grid() {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4.25rem 2rem;
+}
+
+@mixin mobile($query) {
+	& {
+		@media (width <= $query) {
+			@content;
+		}
+	}
+}
