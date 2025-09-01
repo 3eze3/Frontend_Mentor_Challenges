@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="app/verification_email.js" defer></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="assets/images/logo.svg"
+        alt="Logo PING Page" />
+      <h1 class="header__title">We are launching</h1>
+      <span class="header__decription"> Subscribe and get notified </span>
+    </header>
+    <main class="information">
+      <form action="#" class="information__register register">
+        <label class="register__label" for="email">
+          <input
+            class="register__email"
+            type="email"
+            name="email"
+            id="emal"
+            placeholder="Your email addres..." />
+        </label>
+        <span class="register__error">
+          Please provide a valid email addres.
+        </span>
+        <button class="register__send" type="submit">Notify Me</button>
+      </form>
+      <div class="information__diagram">
+        <img
+          src="assets/images/illustration-dashboard.png"
+          alt="illustration Diagram " />
+      </div>
+    </main>
+    <footer class="footer">
+      <nav class="footer__social">
+        <a href="#" class="footer__link" aria-label="Facebook">
+          <i class="footer__icon fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="footer__link" aria-label="Twitter">
+          <i class="footer__icon fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" class="footer__link" aria-label="Instagram">
+          <i class="footer__icon fa-brands fa-instagram"></i>
+        </a>
+      </nav>
+      <small class="footer__copyright">
+        &copy; Copyright Ping. All rights reserved.
+      </small>
+    </footer>
+  </body>
+</html>

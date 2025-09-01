@@ -1,0 +1,56 @@
+@use "../abtract/variables" as colors_bg;
+@use "../abtract/mixin" as layout;
+@font-face {
+  font-family: frank-light;
+  src: url("../assets/fonts/LibreFranklin-Light.ttf");
+}
+
+@font-face {
+  font-family: frank-semibold;
+  src: url("../assets/fonts/LibreFranklin-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: frank-bold;
+  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-size: 20px;
+  font-family: frank-light;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-size: colors_bg.$lg;
+  font-family: frank-light;
+  font-weight: 300;
+  color: colors_bg.$gray;
+  &::after {
+    content: " soon!";
+    display: inline;
+    font-family: frank-bold;
+    color: colors_bg.$very-dark-blue;
+  }
+  @include layout.media-break() {
+    font-size: 1.2em;
+  }
+}
+span {
+  font-size: colors_bg.$md;
+  color: colors_bg.$very-dark-blue;
+  font-weight: 700;
+  @include layout.media-break() {
+    font-size: 0.75em;
+  }
+}
+
+button {
+  background-color: colors_bg.$blue;
+  color: colors_bg.$white;
+  font-size: colors_bg.$sm;
+  cursor: pointer;
+}

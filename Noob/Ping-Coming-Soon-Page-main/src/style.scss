@@ -1,0 +1,9 @@
+// Base
+@use "base/resets_tags";
+@use "base/fonts";
+// layout
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+// Components
+@use "components/form";
