@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <!--  -->
+    <link rel="stylesheet" href="resetCss/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Fylo data storage component</title>
+  </head>
+  <body>
+    <main class="fylo">
+      <div class="fylo__wrapper">
+        <!-- Box One -->
+        <div class="fylo__updata updata">
+          <div class="updata__logo">
+            <img src="images/logo.svg" alt="logo Fylo" />
+          </div>
+          <div class="updata__options">
+            <div class="updata__uses">
+              <img src="images/icon-document.svg" alt="Icon" />
+            </div>
+            <div class="updata__uses">
+              <img src="images/icon-folder.svg" alt="Icon" />
+            </div>
+            <div class="updata__uses">
+              <img src="images/icon-upload.svg" alt="Icon" />
+            </div>
+          </div>
+        </div>
+        <!-- Box two -->
+        <div class="fylo__storage storage">
+          <div class="storage__used">
+            <h1 class="storage__total">
+              You’ve used <b class="storege__total--gigabytes">815 GB</b> of
+              your storage.
+            </h1>
+          </div>
+          <div class="storage__registerrange">
+            <div class="storage__input input">
+              <div class="input__bg">
+                <span class="input__circle"></span>
+              </div>
+            </div>
+            <div class="storage__gigabytes gigabytes">
+              <span class="gigabytes__start">0 GB</span>
+              <span class="gigabytes__limit">1000 GB</span>
+            </div>
+          </div>
+          <div class="storege__status status">
+            <p class="status__information">
+              <b class="status__information--available">185</b>GB left
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
