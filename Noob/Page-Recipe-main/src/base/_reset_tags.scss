@@ -1,0 +1,62 @@
+@use "../abstract/variables" as color_bg;
+@use "../abstract/minxins" as layout;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li,
+ol {
+  line-height: 1.8rem;
+  padding-left: 0.8rem;
+}
+
+ol {
+  padding-left: 1.7rem;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: color_bg.$light-grey;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+section {
+  @include layout.break-media(max-width, 480px) {
+    padding: 1.1rem;
+  }
+}
