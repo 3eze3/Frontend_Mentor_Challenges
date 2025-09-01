@@ -1,0 +1,78 @@
+@use "../abstract/variables" as colors_bg;
+@use "../abstract/mixins" as layout;
+
+@font-face {
+  font-family: roboto_bold;
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: roboto_regular;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: roboto_regular;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include layout.media-break() {
+    background-color: colors_bg.$dark-slate-grey;
+  }
+}
+
+h1,
+h2 {
+  font-family: roboto_bold;
+  color: colors_bg.$dark-slate-grey;
+  font-size: 3em;
+  @include layout.media-break() {
+    font-size: 3.75em;
+  }
+}
+
+p,
+li {
+  font-size: 1.105em;
+  color: colors_bg.$charcoal-grey;
+}
+
+form,
+input,
+button,
+label {
+  font-family: inherit;
+  hyphens: manual;
+  display: block;
+  appearance: none;
+  width: 100%;
+}
+
+input {
+  font-size: 1.12em;
+  color: colors_bg.$charcoal-grey;
+  &::placeholder {
+    color: colors_bg.$grey;
+  }
+}
+
+label {
+  font-family: roboto_bold;
+  font-size: 0.9em;
+  position: relative;
+}
+
+strong {
+  font-family: roboto_bold;
+}
+
+button {
+  background-color: colors_bg.$dark-slate-grey;
+  border-radius: colors_bg.$bd-radius-4px;
+  color: colors_bg.$white;
+  font-size: 1.1em;
+  cursor: pointer;
+}

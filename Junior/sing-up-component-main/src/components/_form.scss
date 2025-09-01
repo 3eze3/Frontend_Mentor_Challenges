@@ -1,0 +1,51 @@
+@use "../abstract/variables" as colors_bg;
+@use "../abstract/mixins" as layout;
+.form {
+  width: 93%;
+  margin-top: 1.85rem;
+  &__input {
+    border-radius: colors_bg.$bd-radius-4px;
+    padding: colors_bg.$padding-1rem-1-7rem;
+    margin: 1rem 0 1.5rem;
+    outline: solid 1px #0003;
+    transition: outline 0.1s ease-in;
+    &:focus {
+      outline-color: colors_bg.$dark-slate-grey;
+      transition: outline 0.1s ease-in;
+    }
+  }
+
+  &__error {
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0.15rem;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+    &--active {
+      opacity: 1;
+      transition: opacity 0.15s ease-in;
+    }
+  }
+
+  &__inputError {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.208);
+    outline-color: rgba(255, 3, 3, 0.502);
+    transition: 0.15s ease;
+  }
+
+  &__btn {
+    padding: colors_bg.$padding-1rem-1-7rem;
+    transition: 0.2s ease-in;
+    @include layout.media-break() {
+      padding: 1rem 1.5rem;
+      &:hover {
+        background-color: colors_bg.$tomato;
+        box-shadow: 0.1rem 0.1rem 0.4rem colors_bg.$tomato,
+          -0.1rem -0.1rem 0.2rem hsl(4, 100%, 64%);
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+}
