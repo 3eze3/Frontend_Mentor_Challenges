@@ -1,39 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 /* Reset */
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p {
   margin: 0;
   padding: 0;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -42,9 +18,7 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select {
+button {
   margin: 0;
 }
 
@@ -58,55 +32,40 @@ html {
   box-sizing: inherit;
 }
 
-img,
-video {
+img {
   height: auto;
   max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
 }
 
 body {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
-  color: hsl(224deg, 23%, 55%);
+  color: hsl(224, 23%, 55%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem 1.55rem;
-  background: hsl(225deg, 100%, 94%) url("../images/pattern-background-mobile.svg") no-repeat left top/contain;
+  background: hsl(225, 100%, 94%) url("../assets/images/pattern-background-mobile.svg") no-repeat left top/contain;
 }
 
 :is(a, button, input, textarea, select, details, summary):focus-visible {
-  outline: hsl(245deg, 75%, 52%) dotted 0.18rem;
+  outline: hsl(245, 75%, 52%) dotted 0.18rem;
   outline-offset: 0.18rem;
 }
 
 @media screen and (min-width: 36em) {
   body {
-    background-image: url("../images/pattern-background-desktop.svg");
+    background-image: url("../images/assets/pattern-background-desktop.svg");
   }
 }
 /* Layout */
 .card {
-  box-shadow: 0.063rem 0.063rem 3.125rem rgba(31, 47, 86, 0.12), 0 0.063rem 0.125rem rgba(31, 47, 86, 0.24);
+  box-shadow: 0.063rem 0.063rem 3.125rem rgba(31.0845, 46.70495, 86.2155, 0.12), 0 0.063rem 0.125rem rgba(31.0845, 46.70495, 86.2155, 0.24);
   border-radius: 1.25rem;
   transition: all 0.2s ease-in-out;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .card-order {
@@ -130,7 +89,7 @@ body {
   margin: 1.125rem 0;
 }
 .card-order__plan {
-  background-color: hsl(225deg, 100%, 98%);
+  background-color: hsl(225, 100%, 98%);
   padding: 1rem;
   line-height: 1.25;
   border-radius: 1rem;
@@ -204,7 +163,7 @@ body {
 }
 @media (hover: hover) {
   .card:hover {
-    box-shadow: 0 0.875rem 1.75rem rgba(31, 47, 86, 0.25), 0 0.625rem 0.625rem rgba(31, 47, 86, 0.22);
+    box-shadow: 0 0.875rem 1.75rem rgba(31.0845, 46.70495, 86.2155, 0.25), 0 0.625rem 0.625rem rgba(31.0845, 46.70495, 86.2155, 0.22);
   }
   .card:hover .card-order__banner {
     opacity: 0.85;
@@ -223,9 +182,9 @@ body {
   border: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-weight: 900;
-  color: hsl(223deg, 47%, 23%);
+  color: hsl(223, 47%, 23%);
 }
 
 .btn {
@@ -241,33 +200,33 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
 }
 .btn--active {
-  color: hsl(245deg, 75%, 52%);
+  color: hsl(245, 75%, 52%);
   text-decoration: underline;
 }
 .btn--primary {
   display: block;
   width: 100%;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 0.95rem 1.5rem;
-  background-color: hsl(245deg, 75%, 52%);
+  background-color: hsl(245, 75%, 52%);
   border-radius: 0.7rem;
-  box-shadow: 0 0.875rem 1.75rem rgba(31, 47, 86, 0.13), 0 0.625rem 0.625rem rgba(31, 47, 86, 0.18);
+  box-shadow: 0 0.875rem 1.75rem rgba(31.0845, 46.70495, 86.2155, 0.13), 0 0.625rem 0.625rem rgba(31.0845, 46.70495, 86.2155, 0.18);
 }
 .btn--secondary {
-  color: hsl(224deg, 23%, 55%);
+  color: hsl(224, 23%, 55%);
 }
 
 @media (hover: hover) {
   .btn--primary:hover {
-    background-color: #766cea;
-    box-shadow: 0 0.875rem 1.75rem rgba(31, 47, 86, 0.25), 0 0.625rem 0.625rem rgba(31, 47, 86, 0.22);
+    background-color: hsl(245, 75%, 67%);
+    box-shadow: 0 0.875rem 1.75rem rgba(31.0845, 46.70495, 86.2155, 0.25), 0 0.625rem 0.625rem rgba(31.0845, 46.70495, 86.2155, 0.22);
   }
   .btn--active:hover {
-    color: #766cea;
+    color: hsl(245, 75%, 67%);
     text-decoration: none;
   }
   .btn--secondary:hover {
-    color: hsl(223deg, 47%, 23%);
+    color: hsl(223, 47%, 23%);
   }
 }
 .attribution {
@@ -276,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .attribution a {
-  color: hsl(245deg, 75%, 52%);
+  color: hsl(245, 75%, 52%);
 }
 @media screen and (min-width: 36em) and (min-height: 50em) {
   .attribution {
@@ -287,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (hover: hover) {
   .attribution a:hover {
-    color: #3828e0;
+    color: hsl(245, 75%, 51.9%);
   }
 }
 
