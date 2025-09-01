@@ -1,0 +1,42 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	@include mx.mobile(v.$mobile) {
+		padding: 0.7rem;
+	}
+	display: grid;
+	place-content: center;
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	font-family: v.$karla-rg;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: v.$green-200-lighter;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+label,
+h1 {
+	font-family: v.$karla-bd;
+	color: v.$grey-900-darker;
+}
+
+h2 {
+	color: v.$white;
+	font-size: 1.2em;
+}
+span {
+	color: v.$white;
+}
+
+input {
+	font-size: 1.13em;
+}
+
+p {
+	color: v.$white;
+}

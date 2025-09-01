@@ -1,0 +1,36 @@
+// --------------------------- Font-Face -----------------------------
+@font-face {
+	font-family: 'Karla Bold';
+	font-weight: 700;
+	src: local('Karla Bold'),
+		url('../assets/fonts/Karla-Bold.woff2') format(woff2),
+		url('../assets/fonts/Karla-Bold.woff') format(woff2),
+		url('../assets/fonts/Karla-Bold.ttf') format(truetype);
+}
+@font-face {
+	font-family: 'Karla Regular';
+	font-weight: 400;
+	src: local('Karla Regular'),
+		url('../assets/fonts/Karla-Regular.woff2') format(woff2),
+		url('../assets/fonts/Karla-Regular.woff') format(woff),
+		url('../assets/fonts/Karla-Regular.ttf') format(truetype);
+}
+// --------------------------- Family Fonts ---------------------------
+$karla-bd: 'Karla Bold';
+$karla-rg: 'Karla Regular';
+// --------------------------- Size Fonts -----------------------------
+$mobile: 556px;
+$desktop: 1440px;
+$tablet: 740px;
+// --------------------------- Colors ---------------------------------
+
+// ### Primary
+
+$green-200-lighter: hsl(148, 38%, 91%);
+$green-600-medium: hsl(169, 82%, 27%);
+$red: hsl(0, 66%, 54%);
+
+// ### Neutral
+
+$white: hsl(0, 0%, 100%);
+$grey-900-darker: hsl(187, 24%, 22%);

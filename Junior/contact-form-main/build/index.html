@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/index.mjs"></script>
+		<title>Contact form</title>
+	</head>
+	<body>
+		<main class="main">
+			<h1 class="main__title">Contact Us</h1>
+			<form class="form">
+				<div class="form__group">
+					<label class="form__label" for="name">First Name *</label>
+					<input class="form__input" id="name" type="text" required />
+				</div>
+				<div class="form__group">
+					<label class="form__label" for="lastname">Last Name *</label>
+					<input class="form__input" id="lastname" type="text" required />
+				</div>
+
+				<div class="form__group form__group-column2">
+					<label class="form__label" for="email">Email Address *</label>
+					<input
+						class="form__input form__input"
+						id="email"
+						type="email"
+						required />
+				</div>
+				<div class="form__group form__group-column2 form__group-radio">
+					<div class="form__wrapper">
+						<label class="form__label" for="enquiry">General Enquiry</label>
+						<input
+							class="form__input form__input-special"
+							name="query"
+							id="enquiry"
+							type="radio"
+							required />
+					</div>
+					<div class="form__wrapper">
+						<label class="form__label" for="request">Support Request</label>
+						<input
+							class="form__input form__input-special"
+							name="query"
+							id="request"
+							type="radio"
+							required />
+					</div>
+				</div>
+				<div class="form__group form__group-column2">
+					<label class="form__label" for="message">Message *</label>
+					<textarea
+						class="form__input form__input-area"
+						id="message"
+						required></textarea>
+				</div>
+
+				<div class="form__group form__group-check">
+					<label class="form__label" for="checkbox">
+						I consent to being contacted by the team *
+					</label>
+					<input
+						class="form__input form__input-special"
+						type="checkbox"
+						id="checkbox"
+						required />
+				</div>
+				<button class="form__submit" id="btn-submit">
+					<span class="form__text">Submit</span>
+				</button>
+			</form>
+			<div class="success">
+				<div class="success__wrapper">
+					<img
+						class="success__img"
+						src="./assets/images/icons/icon-success-check.svg"
+						alt
+						aria-hidden="true" />
+					<h2 class="success__title">Message Sent!</h2>
+				</div>
+				<p class="success__description">
+					Thanks for completing the form. We'll be in touch soon!
+				</p>
+			</div>
+		</main>
+	</body>
+</html>

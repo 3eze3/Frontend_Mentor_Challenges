@@ -1,0 +1,15 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.main {
+	height: 47rem;
+	width: 45rem;
+	border-radius: 1rem;
+	padding: 2rem;
+	background-color: v.$white;
+	@include mx.flex($aling: flex-start, $justify: strech, $gap: 1.8rem);
+	@include mx.mobile(v.$mobile) {
+		height: 100%;
+		width: 100%;
+		padding: 1rem;
+	}
+}
