@@ -1,0 +1,554 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+picture,
+figure {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  white-space: pre-wrap;
+}
+
+::placeholder {
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Inconsolata ExtraBold";
+  font-weight: 800;
+  src: local("Inconsolata ExtraBold"), url("../assets/fonts/Inconsolata-ExtraBold.woff2") format(woff2), url("../assets/fonts/Inconsolata-ExtraBold.woff") format(woff), url("../assets/fonts/Inconsolata-ExtraBold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Inconsolata Bold";
+  font-weight: 700;
+  src: local("Inconsolata Bold"), url("../assets/fonts/Inconsolata-Bold.woff2") format(woff2), url("../assets/fonts/Inconsolata-Bold.woff") format(woff), url("../assets/fonts/Inconsolata-Bold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Inconsolata Medium";
+  font-weight: 500;
+  src: local("Inconsolata Medium"), url("../assets/fonts/Inconsolata-Medium.woff2") format(woff2), url("../assets/fonts/Inconsolata-Medium.woff") format(woff), url("../assets/fonts/Inconsolata-Medium.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Inconsolata Regular";
+  font-weight: 400;
+  src: local("Inconsolata Regular"), url("../assets/fonts/Inconsolata-Regular.woff2") format(woff2), url("../assets/fonts/Inconsolata-Regular.woff") format(woff), url("../assets/fonts/Inconsolata-Regular.ttf") format(truetype);
+}
+body {
+  min-height: 100dvh;
+  hyphens: manual;
+  font-smooth: always;
+  padding-bottom: 15rem;
+  background-image: url("../assets/images/ilustration/background-desktop.png");
+  font-family: "Inconsolata Regular";
+  color: hsl(0, 0%, 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h3 {
+  font-size: 2.3em;
+}
+@media (width <= 475px) {
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
+h4 {
+  font-size: 1.66em;
+  font-family: "Inconsolata Regular";
+}
+@media (width <= 475px) {
+  h4 {
+    font-size: 1em;
+  }
+}
+
+span {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: hsl(7, 71%, 60%);
+  box-shadow: 0.1rem 0.1rem 0.2rem hsla(7, 88%, 67%, 0.257);
+}
+
+p {
+  font-size: 1.45em;
+}
+@media (width <= 475px) {
+  p {
+    font-size: 1.15em;
+  }
+}
+
+h1,
+h2 {
+  font-size: 3.7em;
+  line-height: 1.12;
+}
+@media (width <= 475px) {
+  h1,
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+p,
+input {
+  color: hsl(252, 6%, 83%);
+  color: hsl(252, 6%, 83%);
+}
+
+label,
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(0, 0%, 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inconsolata ExtraBold";
+}
+
+label,
+input,
+button {
+  font-size: 20px;
+}
+
+label,
+input,
+p,
+button {
+  font-family: "Inconsolata Medium";
+}
+
+.main {
+  min-height: 100dvh;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  perspective: 100rem;
+  transition: transform 1s ease-in-out;
+}
+@media (width <= 475px) {
+  .main {
+    width: 590px;
+  }
+}
+.main__card {
+  backface-visibility: hidden;
+  position: absolute;
+}
+.main__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+@media (width <= 475px) {
+  .main__card {
+    width: 100%;
+    padding-inline: 2rem;
+    justify-content: center;
+  }
+}
+.main__card:nth-child(2) {
+  transform: rotateY(180deg);
+}
+.main-back {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.header {
+  min-height: 4rem;
+  padding-block: 2.2rem;
+}
+@media (width <= 475px) {
+  .header {
+    width: 100%;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.header-congrats {
+  gap: 4.8rem;
+  margin-bottom: 4rem;
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header__logo {
+  width: 1.8rem;
+}
+.header__name {
+  font-family: "Inconsolata Bold";
+  font-size: 1.8em;
+}
+.header__information {
+  width: 70%;
+  text-align: center;
+}
+@media (width <= 475px) {
+  .header__information {
+    width: 90%;
+  }
+}
+.header__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
+.header__information-congrats {
+  gap: 2rem;
+}
+.header__reciver {
+  width: 60%;
+  line-height: 1.25;
+}
+@media (width <= 475px) {
+  .header__reciver {
+    width: 100%;
+  }
+}
+.header__email {
+  color: hsl(7, 71%, 60%);
+}
+.header__user {
+  background: -webkit-linear-gradient(300deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form {
+  width: 460px;
+  min-height: 604px;
+}
+@media (width <= 475px) {
+  .form {
+    width: 100%;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: strech;
+  justify-content: strech;
+  gap: 2.8rem;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: strech;
+  justify-content: strech;
+  gap: 1rem;
+}
+.form__drop-zone {
+  background-color: hsla(245, 19%, 35%, 0.251);
+  position: relative;
+  height: 120px;
+  border-radius: 0.75rem;
+  outline: dashed hsl(252, 6%, 83%) 2px;
+  cursor: pointer;
+}
+.form__drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.form__drop-zone:hover {
+  outline-style: solid;
+}
+.form__drop-zone--active {
+  border: 2px dashed #007bff;
+  background-color: rgba(0, 123, 255, 0.05);
+  cursor: pointer;
+}
+.form__preview-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.form__drop-prompt {
+  font-size: 1.1em;
+  color: hsl(252, 6%, 83%);
+}
+.form__cover-logo {
+  background-color: hsla(245, 15%, 58%, 0.251);
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  box-shadow: 0.01rem 0.02rem 0.1rem hsl(252, 6%, 83%), -0.08rem 0.08rem 0.2rem rgba(204, 204, 204, 0.2666666667);
+}
+.form__drop-logo {
+  width: 2rem;
+}
+.form__drop-input {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+}
+.form__info-logo {
+  width: 0.95rem;
+}
+.form__specification {
+  font-size: 0.7em;
+  color: hsl(252, 6%, 83%);
+}
+.form__specification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.form__specification-email {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0.1rem;
+  color: red;
+  opacity: 0;
+}
+.form__specification-email-active {
+  transition: opacity 0.15s ease-in;
+  opacity: 1;
+}
+.form__group {
+  position: relative;
+  height: 60px;
+  padding-left: 1rem;
+  outline: hsl(252, 6%, 83%) solid 1px;
+  border-radius: 0.75rem;
+}
+.form__label {
+  width: calc(100% - 1rem);
+  position: absolute;
+  top: 1.8rem;
+  left: 1rem;
+  transition: transform 0.1s ease, top 0.1s ease 0.01s, left 0.1s ease 0.01s;
+}
+.form__label--active {
+  transform: scale(0.8);
+  top: 0;
+  left: -2rem;
+}
+.form__input {
+  width: calc(100% - 0.5rem);
+  height: 100%;
+  padding-top: 1.2rem;
+}
+.form__submit {
+  height: 3.5rem;
+  border-radius: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.form__submit:hover .form__cover {
+  transform: translateY(0%);
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.form__submit:hover .form__texto-1 {
+  transform: translateY(-100%);
+}
+.form__submit:hover .form__texto-2 {
+  transform: translateY(-100%);
+}
+.form__cover {
+  width: 30%;
+  height: 0%;
+  border-radius: 70%;
+  position: absolute;
+  background-color: hsl(7, 71%, 46%);
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in, height 0.2s ease-in-out, border-radius 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+.form__texto {
+  position: relative;
+  padding-block: 0.25rem;
+  display: block;
+  overflow: hidden;
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #fff;
+  font-family: "Inconsolata Bold";
+}
+.form__texto-2 {
+  position: absolute;
+  color: hsl(248, 70%, 10%);
+  width: 100%;
+}
+
+.container {
+  min-height: 380px;
+}
+
+.ticket {
+  width: 570px;
+  min-height: 285px;
+  background-image: url("../../../build/assets/images/icons/pattern-ticket.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-inline: 1.3rem;
+  position: relative;
+}
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 0rem;
+}
+.ticket__header {
+  min-height: 5rem;
+}
+.ticket__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.ticket__logo {
+  width: 2.5rem;
+}
+.ticket__information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: strech;
+  gap: 1.2rem;
+}
+.ticket__date {
+  font-family: "Inconsolata Medium";
+  color: hsl(252, 6%, 83%);
+  font-size: 1.1em;
+}
+.ticket__user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+.ticket__avatar {
+  width: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.ticket__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ticket__icon {
+  width: 1.3rem;
+}
+.ticket__username {
+  font-size: 1.12em;
+}
+.ticket__username {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.ticket__number {
+  font-family: "Inconsolata Medium";
+  font-size: 2em;
+  color: hsla(252, 6%, 83%, 0.251);
+  position: absolute;
+  right: 0.5rem;
+  rotate: 90deg;
+}
+
+/*# sourceMappingURL=style.css.map */

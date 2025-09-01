@@ -1,0 +1,57 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.header {
+	@include mx.mobile(v.$mobile) {
+		width: 100%;
+	}
+	min-height: 4rem;
+	@include mx.flex($gap: 4rem);
+	padding-block: 2.2rem;
+	&-congrats {
+		gap: 4.8rem;
+		margin-bottom: 4rem;
+	}
+
+	&__wrapper {
+		@include mx.flex($direction: row, $gap: 1rem);
+	}
+
+	&__logo {
+		width: 1.8rem;
+	}
+
+	&__name {
+		font-family: v.$inconsolata-bd;
+		font-size: 1.8em;
+	}
+
+	&__information {
+		width: 70%;
+		@include mx.mobile(v.$mobile) {
+			width: 90%;
+		}
+		text-align: center;
+		@include mx.flex($gap: 1.3rem);
+		&-congrats {
+			gap: 2rem;
+		}
+	}
+
+	&__reciver {
+		width: 60%;
+		@include mx.mobile(v.$mobile) {
+			width: 100%;
+		}
+		line-height: 1.25;
+	}
+
+	&__email {
+		color: v.$Orange-700;
+	}
+
+	&__user {
+		background: -webkit-linear-gradient(300deg, v.$Orange-600, v.$neutral-0);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}

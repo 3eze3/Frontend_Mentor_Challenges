@@ -1,0 +1,163 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+
+.form {
+	@include mx.mobile(v.$mobile) {
+		width: 100%;
+	}
+	width: 460px;
+	min-height: 604px;
+	@include mx.flex($aling: strech, $justify: strech, $gap: 2.8rem);
+
+	&__wrapper {
+		@include mx.flex($aling: strech, $justify: strech, $gap: 1rem);
+	}
+
+	&__drop-zone {
+		background-color: v.$neutral-700-smoth;
+		position: relative;
+		height: 120px;
+		border-radius: 0.75rem;
+		outline: dashed v.$neutral-300 2px;
+		cursor: pointer;
+		@include mx.flex($gap: 1rem);
+		&:hover {
+			outline-style: solid;
+		}
+		&--active {
+			border: 2px dashed #007bff;
+			background-color: rgba(0, 123, 255, 0.05);
+			cursor: pointer;
+		}
+	}
+	&__preview-image {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	&__drop-prompt {
+		font-size: 1.1em;
+		color: v.$neutral-300;
+	}
+
+	&__cover-logo {
+		background-color: v.$neutral-500-smoth;
+		padding: 0.6rem;
+		border-radius: 0.75rem;
+		box-shadow: 0.01rem 0.02rem 0.1rem v.$neutral-300,
+			-0.08rem 0.08rem 0.2rem #cccccc44;
+	}
+
+	&__drop-logo {
+		width: 2rem;
+	}
+
+	&__drop-input {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		visibility: hidden;
+	}
+
+	&__info-logo {
+		width: 0.95rem;
+	}
+
+	&__specification {
+		font-size: 0.7em;
+		color: v.$neutral-300;
+		@include mx.flex($direction: row, $gap: 0.5rem, $justify: flex-start);
+		&-email {
+			position: absolute;
+			bottom: -1.5rem;
+			left: 0.1rem;
+			color: red;
+			opacity: 0;
+			&-active {
+				transition: opacity 0.15s ease-in;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__group {
+		position: relative;
+		height: 60px;
+		padding-left: 1rem;
+		outline: v.$neutral-300 solid 1px;
+		border-radius: 0.75rem;
+	}
+
+	&__label {
+		width: calc(100% - 1rem);
+		position: absolute;
+		top: 1.8rem;
+		left: 1rem;
+		transition: transform 0.1s ease, top 0.1s ease 0.01s, left 0.1s ease 0.01s;
+		&--active {
+			transform: scale(0.8);
+			top: 0;
+			left: -2rem;
+		}
+	}
+
+	&__input {
+		width: calc(100% - 0.5rem);
+		height: 100%;
+		padding-top: 1.2rem;
+	}
+
+	&__submit {
+		height: 3.5rem;
+		border-radius: 0.8rem;
+		position: relative;
+		overflow: hidden;
+		&:hover .form__cover {
+			transform: translateY(0%);
+			height: 100%;
+			width: 100%;
+			border-radius: 0.5rem;
+		}
+
+		&:hover .form__texto-1 {
+			transform: translateY(-100%);
+		}
+
+		&:hover .form__texto-2 {
+			transform: translateY(-100%);
+		}
+	}
+
+	&__cover {
+		width: 30%;
+		height: 0%;
+		border-radius: 70%;
+		position: absolute;
+		background-color: hsl(7, 71%, 46%);
+		z-index: 0;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+		transform: translateY(100%);
+		transition: transform 0.2s ease-in, height 0.2s ease-in-out,
+			border-radius 0.2s ease-in-out, width 0.2s ease-in-out;
+	}
+
+	&__texto {
+		position: relative;
+		padding-block: 0.25rem;
+		display: block;
+		overflow: hidden;
+		z-index: 10;
+		transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+		color: #fff;
+		font-family: v.$inconsolata-bd;
+		&-2 {
+			position: absolute;
+			color: v.$neutral-900;
+
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.main {
+	min-height: 100dvh;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	@include mx.mobile(v.$mobile) {
+		width: 590px;
+	}
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	perspective: 100rem;
+	transition: transform 1s ease-in-out;
+
+	&__card {
+		@include mx.flex($justify: flex-start, $gap: 1rem);
+		backface-visibility: hidden;
+		position: absolute;
+		@include mx.mobile(v.$mobile) {
+			width: 100%;
+			padding-inline: 2rem;
+			justify-content: center;
+		}
+		&:nth-child(2) {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&-back {
+		transform: translateX(-100%) rotateY(-180deg);
+	}
+}

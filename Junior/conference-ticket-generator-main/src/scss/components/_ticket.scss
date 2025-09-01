@@ -1,0 +1,77 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.container {
+	min-height: 380px;
+}
+
+.ticket {
+	width: 570px;
+	min-height: 285px;
+	background-image: url('../../../build/assets/images/icons/pattern-ticket.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@include mx.flex($aling: flex-start, $justify: space-around, $gap: 0rem);
+	padding-inline: 1.3rem;
+	position: relative;
+	&__header {
+		min-height: 5rem;
+		@include mx.flex(
+			$direction: row,
+			$aling: flex-start,
+			$justify: flex-start,
+			$gap: 1rem
+		);
+	}
+
+	&__logo {
+		width: 2.5rem;
+	}
+
+	&__information {
+		@include mx.flex($aling: flex-start, $justify: strech, $gap: 1.2rem);
+	}
+
+	&__date {
+		font-family: v.$inconsolata-md;
+		color: v.$neutral-300;
+		font-size: 1.1em;
+	}
+
+	&__user {
+		@include mx.flex(
+			$aling: center,
+			$justify: flex-start,
+			$direction: row,
+			$gap: 1.2rem
+		);
+	}
+
+	&__avatar {
+		width: 5rem;
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	&__wrapper {
+		@include mx.flex($aling: flex-start, $gap: 0.5rem);
+	}
+
+	&__icon {
+		width: 1.3rem;
+	}
+
+	&__username {
+		@include mx.flex($direction: row, $justify: flex-start, $gap: 0.5rem);
+		font-size: 1.12em;
+	}
+
+	&__number {
+		font-family: v.$inconsolata-md;
+		font-size: 2em;
+		color: v.$neutral-300-smoth;
+		position: absolute;
+		right: 0.5rem;
+		rotate: 90deg;
+	}
+}

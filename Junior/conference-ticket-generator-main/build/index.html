@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/index.mjs" type="module"></script>
+		<title>Conference ticket generator</title>
+	</head>
+	<body>
+		<main class="main">
+			<section class="main__card">
+				<header class="header">
+					<div class="header__wrapper">
+						<img
+							src="./assets/images/icons/logo-mark.svg"
+							alt="logo coding conf"
+							class="header__logo" />
+						<span class="header__name">Coding Conf</span>
+					</div>
+					<div class="header__information">
+						<h1 class="header__title">
+							Your Journey to Coding Conf 2025 Starts Here!
+						</h1>
+						<p class="header__phrase">
+							Secure your spot at next year's biggest coding conference.
+						</p>
+					</div>
+				</header>
+
+				<form class="form">
+					<div class="form__wrapper">
+						<label class="form__upload" for="upload">Upload Avatar</label>
+						<div class="form__drop-zone">
+							<div class="form__cover-logo">
+								<img
+									class="form__drop-logo"
+									src="./assets/images/icons/icon-upload.svg"
+									alt="Icon upload image" />
+							</div>
+							<span class="form__drop-prompt">
+								Drag and drop or click to upload
+							</span>
+							<input
+								class="form__drop-input"
+								type="file"
+								id="upload"
+								accept="image/png, image/jpeg" />
+						</div>
+						<p class="form__specification">
+							<img
+								class="form__info-logo"
+								src="./assets/images/icons/icon-info.svg"
+								alt="" />
+							Upload your photo (JPG or PNG, max size: 500KB).
+						</p>
+					</div>
+					<div class="form__group">
+						<label class="form__label" for="name">Full Name</label>
+						<input class="form__input" type="text" id="name" required />
+					</div>
+
+					<div class="form__group">
+						<label class="form__label" for="email">Email Address</label>
+						<input class="form__input" type="email" id="email" required />
+						<p class="form__specification form__specification-email">
+							<img
+								class="form__info-logo"
+								src="./assets/images/icons/icon-info.svg"
+								alt="" />
+							Please entre a valid email address.
+						</p>
+					</div>
+
+					<div class="form__group">
+						<label class="form__label" for="username">GitHub Username</label>
+						<input class="form__input" type="text" id="username" required />
+					</div>
+
+					<button class="form__submit" type="submit" id="submit">
+						<span class="form__cover" aria-hidden="true"></span>
+						<span class="form__texto">
+							<span class="form__texto form__texto-1">Generate My Ticket</span>
+							<span class="form__texto form__texto-2" aria-hidden="true">
+								Generate My Ticket
+							</span>
+						</span>
+					</button>
+				</form>
+			</section>
+			<section class="main__card">
+				<header class="header header-congrats">
+					<div class="header__wrapper">
+						<img
+							src="./assets/images/icons/logo-mark.svg"
+							alt="logo coding conf"
+							class="header__logo" />
+						<span class="header__name">Coding Conf</span>
+					</div>
+					<div class="header__information header__information-congrats">
+						<h2 class="header__congrats">
+							Congrats, <span class="header__user">Jonatan Kristof!</span> Your
+							ticket is ready.
+						</h2>
+						<p class="header__reciver">
+							We've emailed your ticket to
+							<span class="header__email"> jonatan@email.com</span> and will
+							send updates in the run up to the event.
+						</p>
+					</div>
+				</header>
+				<div class="container">
+					<div class="ticket">
+						<div class="ticket__header">
+							<div class="ticket__logo">
+								<img
+									src="./assets/images/icons/logo-mark.svg"
+									alt="Icon Mark" />
+							</div>
+							<header class="ticket__information">
+								<h3 class="ticket__company">Coding Conf</h3>
+								<span class="ticket__date"> Jan 31, 2025 / Austin, TX</span>
+							</header>
+						</div>
+
+						<footer class="ticket__user">
+							<div class="ticket__avatar">
+								<img
+									id="avatar"
+									src="./assets/images/ilustration/image-avatar.jpg"
+									alt="Avatar" />
+							</div>
+							<div class="ticket__wrapper">
+								<h4 class="ticket__name">Jonatan Kristof</h4>
+								<p
+									class="ticket__username"
+									aria-label="user github: jonatankristofo0101">
+									<img
+										class="ticket__icon"
+										src="./assets/images/icons/icon-github.svg"
+										alt="Icon github" />@jonatankristof0101
+								</p>
+							</div>
+						</footer>
+						<span class="ticket__number">#01609</span>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

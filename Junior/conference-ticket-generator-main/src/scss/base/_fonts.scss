@@ -1,0 +1,89 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	padding-bottom: 15rem;
+	background-image: url('../assets/images/ilustration/background-desktop.png');
+	font-family: v.$inconsolata-rg;
+	color: v.$neutral-0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+h3 {
+	font-size: 2.3em;
+	@include mx.mobile(v.$mobile) {
+		font-size: 1.1em;
+	}
+}
+
+h4 {
+	font-size: 1.66em;
+	font-family: v.$inconsolata-rg;
+	@include mx.mobile(v.$mobile) {
+		font-size: 1em;
+	}
+}
+
+span {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	background-color: v.$Orange-700;
+	box-shadow: 0.1rem 0.1rem 0.2rem v.$Orange-500;
+}
+
+p {
+	font-size: 1.45em;
+	@include mx.mobile(v.$mobile) {
+		font-size: 1.15em;
+	}
+}
+
+h1,
+h2 {
+	font-size: 3.7em;
+	@include mx.mobile(v.$mobile) {
+		font-size: 2.5em;
+	}
+	line-height: 1.12;
+}
+p,
+input {
+	color: v.$neutral-300;
+	color: v.$neutral-300;
+}
+
+label,
+h1,
+h2,
+h3,
+h4 {
+	color: v.$neutral-0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: v.$inconsolata-ebd;
+}
+
+label,
+input,
+button {
+	font-size: 20px;
+}
+
+label,
+input,
+p,
+button {
+	font-family: v.$inconsolata-md;
+}
