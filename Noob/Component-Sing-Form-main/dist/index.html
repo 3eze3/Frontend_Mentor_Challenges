@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./app/app.js" defer></script>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__information">
+        <h1 class="main__title">Learn to code by watching others</h1>
+        <p class="main__description">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <section class="main__login login">
+        <div class="login__wrapper">
+          <p class="login__promo">
+            <em class="login__promo login__promo--days">Try it free 7 days </em>
+            then $20/mo. thereafter
+          </p>
+        </div>
+        <form action="#" class="login__form" novalidate>
+          <label class="login__label" aria-label="Enter your name" for="name">
+            <input
+              type="text"
+              id="name"
+              class="login__field"
+              placeholder="First Name"
+              required />
+            <img
+              class="login__error login__error--icon"
+              src="assets/images/icon-error.svg"
+              alt
+              aria-hidden="true" />
+            <small class="login__error login__error--message"
+              >First Name cannot be empty</small
+            >
+          </label>
+
+          <label
+            class="login__label"
+            aria-label="Enter your lastname"
+            for="lastname">
+            <input
+              type="text"
+              id="lastname"
+              class="login__field"
+              placeholder="Last Name"
+              required />
+            <img
+              class="login__error login__error--icon"
+              src="assets/images/icon-error.svg"
+              alt
+              aria-hidden="true" />
+            <small class="login__error login__error--message"
+              >Last Name cannot be empty</small
+            >
+          </label>
+
+          <label class="login__label" aria-label="Enter your email" for="email">
+            <input
+              type="email"
+              id="email"
+              class="login__field"
+              placeholder="Email Address"
+              required />
+            <img
+              class="login__error login__error--icon"
+              src="assets/images/icon-error.svg"
+              alt
+              aria-hidden="true" />
+            <small class="login__error login__error--message">
+              Looks like this is not email
+            </small>
+          </label>
+
+          <label
+            class="login__label"
+            aria-label="Enter your password"
+            for="password">
+            <input
+              type="password"
+              id="password"
+              class="login__field"
+              placeholder="Password"
+              required />
+            <img
+              class="login__error login__error--icon"
+              src="assets/images/icon-error.svg"
+              alt
+              aria-hidden="true" />
+            <small class="login__error login__error--message">
+              Password cannot be empty
+            </small>
+          </label>
+          <button type="submit" class="login__submit">
+            CLAIM YOUR FREE TRIAL
+          </button>
+          <p class="login__conditions">
+            By clicking the button, you are agreeing to our
+            <a
+              href="#"
+              class="login__conditions login__conditions--link"
+              aria-label="Link for the terms and services">
+              Terms and Services</a
+            >
+          </p>
+        </form>
+        <!--  -->
+      </section>
+    </main>
+  </body>
+</html>

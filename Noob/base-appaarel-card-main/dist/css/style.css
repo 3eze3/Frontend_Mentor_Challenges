@@ -1,0 +1,273 @@
+@font-face {
+  font-family: josefin_light;
+  src: url("../assets/fonts/JosefinSans-Light.ttf");
+}
+@font-face {
+  font-family: josefin_regular;
+  src: url("../assets/fonts/JosefinSans-Regular.ttf");
+}
+@font-face {
+  font-family: josefin_bold;
+  src: url("../assets/fonts/JosefinSans-Bold.ttf");
+}
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: josefin_bold;
+  font-size: 3.8em;
+  line-height: 1.2em;
+  letter-spacing: 0.25em;
+  color: hsl(0deg, 6%, 24%);
+  margin-bottom: 1rem;
+}
+h1::before {
+  content: "WE'RE";
+  display: block;
+  font-family: josefin_light;
+  color: hsl(0deg, 36%, 70%);
+  font-weight: 100;
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+}
+
+p {
+  font-family: josefin_regular;
+  font-size: 1em;
+  line-height: 1.5;
+  color: hsl(0deg, 36%, 70%);
+  hyphens: manual;
+}
+@media screen and (max-width: 480px) {
+  p {
+    text-align: center;
+  }
+}
+
+form,
+input,
+label {
+  font-family: josefin_light;
+  display: block;
+  appearance: none;
+  color: hsl(0deg, 36%, 70%);
+}
+
+input {
+  font-size: 0.95em;
+}
+
+button {
+  background-image: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+button:hover {
+  box-shadow: 0.1rem 0.1rem 0.2rem hsl(0deg, 74%, 74%), -0.1rem -0.1rem 0.2rem hsl(0deg, 80%, 86%);
+  transition: 0.1s ease;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+input[type=email]::webkit-validation-bubble-message {
+  display: none;
+}
+
+.register {
+  width: 100%;
+  height: 3.65rem;
+  padding-left: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  border-radius: 2rem;
+  border: solid rgba(121, 121, 121, 0.1019607843) 1.5px;
+  margin-top: 2rem;
+}
+.register__email {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.register__input {
+  outline-color: transparent;
+  width: 100%;
+  height: 90%;
+  padding-right: 0.5rem;
+}
+.register__button {
+  padding: 1.2rem 2.8rem;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .register__button {
+    padding: 1.2rem 2rem;
+  }
+}
+.register__box {
+  width: 80%;
+  padding-inline: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  outline: solid rgba(86, 84, 84, 0.515) 1px;
+  transform: translateY(30rem);
+}
+.register__icon {
+  width: 4rem;
+}
+.register__active {
+  transform: translateY(0.5rem);
+}
+
+.card {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 6rem;
+  }
+}
+.card__content {
+  flex: 60%;
+  padding: 1.9rem 0 0 10rem;
+  transform: translateY(0);
+  transition: transform 0.15s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .card__content {
+    padding: 0rem 0 7rem 0;
+    transform: none;
+  }
+}
+.card__content--active {
+  transform: translateY(50rem);
+  transition: transform 0.15s ease-in;
+}
+.card__icon {
+  width: 11rem;
+  margin: 2rem 0 9rem;
+}
+@media screen and (max-width: 480px) {
+  .card__icon {
+    width: 8rem;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card__box {
+    position: absolute;
+    top: 2.1rem;
+    left: 2rem;
+  }
+}
+.card__wrapper {
+  width: 70%;
+}
+@media screen and (max-width: 480px) {
+  .card__wrapper {
+    width: 100%;
+  }
+}
+.card__ilustration {
+  flex: 45%;
+}
+.card__ilustration--active {
+  transform: translateY(-50rem);
+  transition: transform 0.15s ease-in;
+}
+.card__thanks {
+  width: 35rem;
+  height: 11rem;
+  position: absolute;
+  top: calc(50% - 5.5rem);
+  left: calc(50% - 17.5rem);
+  border-radius: 2rem;
+  padding-block: 2rem;
+  background: #a0d9ff;
+  display: none;
+  transition: opacity 0.2s ease-in 1s;
+  box-shadow: inset -4px 4px 8px #bfeffd, inset 4px -4px 8px #648988;
+}
+@media screen and (max-width: 480px) {
+  .card__thanks {
+    width: 25rem;
+    height: 14rem;
+    top: calc(50% - 8rem);
+    left: calc(50% - 12.5rem);
+  }
+}
+.card__thanks--active {
+  display: block;
+  transition: opacity 0.2s ease-in 1s;
+}
+
+/*# sourceMappingURL=style.css.map */

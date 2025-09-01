@@ -1,0 +1,39 @@
+@use "../abtract/mixin" as layout;
+@use "../abtract/varibles" as colors_bg;
+.login {
+  flex: 60%;
+  min-height: 35rem;
+  padding-inline: 2rem;
+  @include layout.media-break() {
+    padding-inline: 0;
+  }
+  &__wrapper {
+    height: 3.78rem;
+    margin-bottom: 1.6rem;
+    background-color: colors_bg.$blue;
+    border-radius: 0.65rem;
+    text-align: center;
+    @include layout.bx_bottom(colors_bg.$soft-dark);
+    @include layout.media-break() {
+      height: 6rem;
+      padding-inline: 4.5rem;
+      @include layout.flex($gap: 0rem);
+      text-align: center;
+    }
+  }
+
+  &__promo {
+    line-height: 3.78rem;
+    @include layout.media-break() {
+      line-height: 1.8;
+    }
+  }
+
+  &__form {
+    height: calc(100% - 5.6rem);
+    background-color: colors_bg.$white;
+    border-radius: 0.65rem;
+    padding: 2.5rem;
+    @include layout.bx_bottom(colors_bg.$soft-dark);
+  }
+}

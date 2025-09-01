@@ -1,0 +1,79 @@
+@use "../abtract/variables" as colors_bg;
+@use "../abtract/mixin" as layout;
+@font-face {
+  font-family: josefin_light;
+  src: url("../assets/fonts/JosefinSans-Light.ttf");
+}
+
+@font-face {
+  font-family: josefin_regular;
+  src: url("../assets/fonts/JosefinSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: josefin_bold;
+  src: url("../assets/fonts/JosefinSans-Bold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: josefin_bold;
+  font-size: colors_bg.$lg;
+  line-height: 1.2em;
+  letter-spacing: 0.25em;
+  color: colors_bg.$dark-grayish-red;
+  margin-bottom: 1rem;
+  &::before {
+    content: "WE'RE";
+    display: block;
+    font-family: josefin_light;
+    color: colors_bg.$desaturated-red;
+    font-weight: 100;
+  }
+  @include layout.media-break() {
+    text-align: center;
+    font-size: colors_bg.$lg_mobile;
+  }
+}
+
+p {
+  font-family: josefin_regular;
+  font-size: colors_bg.$md;
+  line-height: 1.5;
+  color: colors_bg.$desaturated-red;
+  hyphens: manual;
+  @include layout.media-break() {
+    text-align: center;
+  }
+}
+
+form,
+input,
+label {
+  font-family: josefin_light;
+  display: block;
+  appearance: none;
+  color: colors_bg.$desaturated-red;
+}
+
+input {
+  font-size: colors_bg.$sm;
+}
+
+button {
+  background-image: colors_bg.$linear-orange;
+  cursor: pointer;
+  transition: 0.1s ease;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.2rem hsl(0, 74%, 74%),
+      -0.1rem -0.1rem 0.2rem hsl(0, 80%, 86%);
+    transition: 0.1s ease;
+  }
+}

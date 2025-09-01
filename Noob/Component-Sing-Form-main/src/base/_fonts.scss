@@ -1,0 +1,87 @@
+@use "../abtract/varibles" as colors_bg;
+@use "../abtract/mixin" as layout;
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-Semibold;
+  src: url();
+  src: url("../assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url();
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 100%;
+  hyphens: auto;
+  font-smooth: always;
+  font-family: Poppins-Regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: colors_bg.$red;
+  background-image: url("../assets/images/bg-intro-desktop.png");
+  overflow: hidden;
+  @include layout.media-break() {
+    overflow: visible;
+  }
+}
+
+h1 {
+  font-size: colors_bg.$lg;
+  font-family: Poppins-Bold;
+  line-height: 1.2;
+  color: colors_bg.$white;
+  margin-bottom: 2rem;
+  hyphens: manual;
+  @include layout.media-break() {
+    font-size: 1.85em;
+    text-align: center;
+  }
+}
+
+p {
+  font-size: colors_bg.$rm;
+  font-family: Poppins-Regular;
+  line-height: 1.6;
+  color: colors_bg.$white-gray;
+}
+
+p a {
+  color: colors_bg.$red;
+}
+
+em {
+  color: colors_bg.$white;
+  font-family: Poppins-Semibold;
+}
+
+a,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+button {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.login__error--message {
+  display: block;
+  font-family: Poppins-Regular;
+  font-size: colors_bg.$error;
+  color: colors_bg.$red;
+  font-style: italic;
+  text-align: right;
+}
