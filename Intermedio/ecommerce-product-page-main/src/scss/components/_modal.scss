@@ -1,0 +1,44 @@
+@use '../abstract/mixins' as mx;
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #1717173c;
+	background-image: linear-gradient(270deg, #91c7b160, #aeae9b9b);
+	inset: 0;
+	display: none;
+	z-index: 30;
+
+	@include mx.mobile(459px) {
+		display: none;
+	}
+
+	&--open {
+		@include mx.flex($gap: 0rem);
+		@include mx.mobile(459px) {
+			display: none;
+		}
+	}
+
+	&__close {
+		position: relative;
+		z-index: 40;
+		align-self: flex-end;
+		line-height: 1;
+		font-size: 3em;
+	}
+
+	&__container {
+		width: 530px;
+		gap: 3rem;
+	}
+
+	&__images {
+		width: 530px;
+		height: 550px;
+	}
+
+	&__thumbnails {
+		width: 90%;
+	}
+}

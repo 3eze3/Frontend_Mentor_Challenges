@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<title>E-commerce product page</title>
+
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/index.mjs" type="module"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__container">
+				<button class="header__menu" aria-label="Menu">
+					<img
+						class="header__menu-logo header__menu-open"
+						src="./assets/images/icons/icon-menu.svg"
+						alt="Menu open" />
+					<img
+						class="header__menu-logo header__menu-close"
+						src="./assets/images/icons/icon-close.svg"
+						alt="Menu close" />
+				</button>
+				<img
+					src="./assets/images/icons/logo.svg"
+					alt="sneakers company logo"
+					class="header__logo" />
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#collections" class="nav__link">
+								<span class="nav__link-1">Collections</span>
+								<span aria-hidden="true" class="nav__link-2">Collections</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#men" class="nav__link">
+								<span class="nav__link-1">Men</span>
+								<span aria-hidden="true" class="nav__link-2">Men</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#women" class="nav__link">
+								<span class="nav__link-1">Women</span>
+								<span aria-hidden="true" class="nav__link-2">Women</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#about" class="nav__link">
+								<span class="nav__link-1">About</span>
+								<span aria-hidden="true" class="nav__link-2">About</span>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#contact" class="nav__link">
+								<span class="nav__link-1">Contact</span>
+								<span aria-hidden="true" class="nav__link-2">Contact</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<section class="cart">
+				<h2 class="sr-only">Carrito de compras</h2>
+				<button
+					class="cart__toggle-btn"
+					aria-label="Button to view the cart of products"
+					aria-haspopup="true"
+					aria-live="polite">
+					<span class="cart__number">3</span>
+					<img
+						class="cart__logo"
+						src="./assets/images/icons/icon-cart.svg"
+						alt="cart the products" />
+				</button>
+				<article class="cart__resume">
+					<h3 class="sr-only">Resume cart</h3>
+					<div class="cart__header">
+						<span class="cart__title">Cart</span>
+					</div>
+					<span class="cart__empty">Your cart is empty.</span>
+					<div class="cart__container">
+						<ul class="cart__products">
+							<li class="cart__product">
+								<div class="cart__image">
+									<img
+										class="cart__image-product"
+										src="./assets/images/ilustration/image-product-1-thumbnail.jpg"
+										alt="Limited sneakers image" />
+								</div>
+								<div class="cart__wrapper">
+									<strong class="cart__name-product">
+										Fall Limited Edition Sneakers
+									</strong>
+									<div class="cart__information-product">
+										<span class="cart__price-product">$125.00</span>
+										<span class="cart__amount-product"></span>
+										<span class="cart__total-product"></span>
+									</div>
+								</div>
+								<button
+									class="cart__remove-btn"
+									aria-label="Button to delete the product">
+									<img
+										class="cart__icon-remove"
+										src="./assets/images/icons/icon-delete.svg"
+										alt="icon delete product" />
+								</button>
+							</li>
+						</ul>
+						<button class="cart__checkout-btn" aria-label="Add to cart">
+							<span aria-hidden="true" class="cart__checkout-cover"></span>
+							<span class="cart__checkout-label">
+								<span class="cart__checkout-label cart__checkout-label-1">
+									Checkout
+								</span>
+								<span
+									class="cart__checkout-label cart__checkout-label-2"
+									aria-hidden="true">
+									Checkout
+								</span>
+							</span>
+						</button>
+					</div>
+				</article>
+
+				<img
+					class="cart__profile"
+					src="./assets/images/ilustration/image-avatar.png"
+					alt="avatar perfil" />
+			</section>
+		</header>
+
+		<main class="main">
+			<section class="gallery">
+				<h2 class="sr-only">Images of sneakers</h2>
+				<ul class="gallery__images" tabindex="0">
+					<li class="gallery__item">
+						<img
+							alt="Product sneakers Limited image"
+							class="gallery__image"
+							id="photo-1"
+							src="./assets/images/ilustration/image-product-1.jpg" />
+					</li>
+					<li class="gallery__item">
+						<img
+							alt="Product sneakers Limited image"
+							class="gallery__image"
+							id="photo-2"
+							src="./assets/images/ilustration/image-product-2.jpg" />
+					</li>
+					<li class="gallery__item">
+						<img
+							alt="Product sneakers Limited image"
+							class="gallery__image"
+							id="photo-3"
+							src="./assets/images/ilustration/image-product-3.jpg" />
+					</li>
+					<li class="gallery__item">
+						<img
+							alt="Product sneakers Limited image"
+							class="gallery__image"
+							id="photo-4"
+							src="./assets/images/ilustration/image-product-4.jpg" />
+					</li>
+				</ul>
+
+				<ul class="gallery__thumbnails">
+					<li class="gallery__thumbnail">
+						<a class="gallery__link" href="#photo-1">
+							<img
+								class="gallery__image-preview"
+								src="./assets/images/ilustration/image-product-1-thumbnail.jpg"
+								alt="Preview image sneakers" />
+						</a>
+					</li>
+					<li class="gallery__thumbnail">
+						<a class="gallery__link" href="#photo-2">
+							<img
+								class="gallery__image-preview"
+								src="./assets/images/ilustration/image-product-2-thumbnail.jpg"
+								alt="Preview image sneakers" />
+						</a>
+					</li>
+					<li class="gallery__thumbnail">
+						<a class="gallery__link" href="#photo-3">
+							<img
+								class="gallery__image-preview"
+								src="./assets/images/ilustration/image-product-3-thumbnail.jpg"
+								alt="Preview image sneakers" />
+						</a>
+					</li>
+					<li class="gallery__thumbnail">
+						<a class="gallery__link" href="#photo-4">
+							<img
+								class="gallery__image-preview"
+								src="./assets/images/ilustration/image-product-4-thumbnail.jpg"
+								alt="Preview image sneakers" />
+						</a>
+					</li>
+				</ul>
+			</section>
+			<article class="product">
+				<section class="product__information">
+					<div class="product__header">
+						<h1 class="product__company">Sneaker Company</h1>
+						<h2 class="product__title">Fall Limited Edition Sneakers</h2>
+					</div>
+					<p class="product__description">
+						These low-profile sneakers are your perfect casual wear companion.
+						Featuring a durable rubber outer sole, they’ll withstand everything
+						the weather can offer.
+					</p>
+				</section>
+				<div class="product__pricing">
+					<div class="product__price-wrapper">
+						<strong class="product__price">$125.00</strong>
+						<div class="product__discount">
+							<span class="product__discount-value">50%</span>
+						</div>
+					</div>
+					<span class="product__original-price">$250.00</span>
+				</div>
+				<form class="form">
+					<div class="form__quantity">
+						<button
+							class="form__btn"
+							aria-label="Decrement button"
+							id="decrement">
+							<img
+								class="form__icon form__icon--btn"
+								src="./assets/images/icons/icon-minus.svg"
+								alt="image decrement icon" />
+						</button>
+
+						<input
+							class="form__input"
+							type="number"
+							value="0"
+							id="value"
+							disabled
+							aria-label="Quantity selector" />
+
+						<button
+							class="form__btn"
+							aria-label="Increment button"
+							id="increment">
+							<img
+								class="form__icon form__icon--btn"
+								src="./assets/images/icons/icon-plus.svg"
+								alt="image increment icon" />
+						</button>
+					</div>
+
+					<button
+						aria-label="Add product to the cart"
+						class="form__add-product">
+						<span aria-hidden="true" class="form__add-cover"></span>
+						<img
+							class="form__icon--cart form__icon"
+							src="./assets/images/icons/icon-cart.svg"
+							alt="cart icon" />
+						<span class="form__add-label">
+							<span class="form__add-label form__add-label-1">Add to cart</span>
+							<span
+								class="form__add-label form__add-label-2"
+								aria-hidden="true">
+								Add to cart
+							</span>
+						</span>
+					</button>
+				</form>
+			</article>
+			<div class="modal">
+				<section class="gallery modal__container">
+					<button class="modal__close" aria-label="Close modal">&times;</button>
+					<h2 class="sr-only">Images of sneakers</h2>
+					<button
+						class="gallery__row gallery__row--next"
+						aria-label="Next Image">
+						<img
+							class="gallery__rows"
+							src="./assets/images/icons/icon-previous.svg"
+							alt="Next Image" />
+					</button>
+
+					<ul class="gallery__images modal__images">
+						<li class="gallery__item">
+							<img
+								alt="Product sneakers Limited image"
+								class="gallery__image"
+								id="photo-m1"
+								src="./assets/images/ilustration/image-product-1.jpg" />
+						</li>
+						<li class="gallery__item">
+							<img
+								alt="Product sneakers Limited image"
+								class="gallery__image"
+								id="photo-m2"
+								src="./assets/images/ilustration/image-product-2.jpg" />
+						</li>
+						<li class="gallery__item">
+							<img
+								alt="Product sneakers Limited image"
+								class="gallery__image"
+								id="photo-m3"
+								src="./assets/images/ilustration/image-product-3.jpg" />
+						</li>
+						<li class="gallery__item">
+							<img
+								alt="Product sneakers Limited image"
+								class="gallery__image"
+								id="photo-m4"
+								src="./assets/images/ilustration/image-product-4.jpg" />
+						</li>
+					</ul>
+
+					<ul class="gallery__thumbnails modal__thumbnails">
+						<li class="gallery__thumbnail">
+							<a class="gallery__link" href="#photo-m1">
+								<img
+									class="gallery__image-preview"
+									src="./assets/images/ilustration/image-product-1-thumbnail.jpg"
+									alt="Preview image sneakers" />
+							</a>
+						</li>
+						<li class="gallery__thumbnail">
+							<a class="gallery__link" href="#photo-m2">
+								<img
+									class="gallery__image-preview"
+									src="./assets/images/ilustration/image-product-2-thumbnail.jpg"
+									alt="Preview image sneakers" />
+							</a>
+						</li>
+						<li class="gallery__thumbnail">
+							<a class="gallery__link" href="#photo-m3">
+								<img
+									class="gallery__image-preview"
+									src="./assets/images/ilustration/image-product-3-thumbnail.jpg"
+									alt="Preview image sneakers" />
+							</a>
+						</li>
+						<li class="gallery__thumbnail">
+							<a class="gallery__link" href="#photo-m4">
+								<img
+									class="gallery__image-preview"
+									src="./assets/images/ilustration/image-product-4-thumbnail.jpg"
+									alt="Preview image sneakers" />
+							</a>
+						</li>
+					</ul>
+					<button
+						class="gallery__row gallery__row--previous"
+						aria-label="Previews Image">
+						<img
+							class="gallery__rows"
+							src="./assets/images/icons/icon-next.svg"
+							alt="Previous Image" />
+					</button>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

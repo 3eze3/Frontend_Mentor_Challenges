@@ -1,0 +1,61 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.nav {
+	@include mx.mobile(459px) {
+		position: fixed;
+		inset: 0;
+		background-color: #1717175c;
+		z-index: 140;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.55s ease-in-out, visibility 0.55s ease-in-out;
+		&-active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__list {
+		@include mx.flex($direction: row, $justify: space-between);
+		overflow: hidden;
+
+		@include mx.mobile(459px) {
+			transform: translateX(-25rem);
+			transition: transform 0.5s ease-in-out;
+			padding-top: 5rem;
+			padding-inline: 1.5rem;
+			background-color: v.$white;
+			width: 70%;
+			height: 100%;
+			&-active {
+				transform: translateX(0rem);
+			}
+			@include mx.flex($aling: flex-start, $justify: flex-start, $gap: 1rem);
+		}
+	}
+
+	&__link {
+		position: relative;
+		&:hover {
+			transform: translateY(-100%);
+		}
+
+		transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+			color 0.3s ease-in-out;
+		@include mx.mobile(459px) {
+			font-size: 2em;
+			&:hover {
+				transform: none;
+			}
+		}
+	}
+
+	&__link-2 {
+		inset: 0;
+		position: absolute;
+		translate: 0 100%;
+		@include mx.mobile(459px) {
+			display: none;
+		}
+	}
+}

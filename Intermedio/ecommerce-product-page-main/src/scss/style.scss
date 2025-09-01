@@ -1,0 +1,12 @@
+@use './base/reset';
+@use './base/fonts';
+//
+@use './layout/header';
+@use './layout/main';
+@use './layout/gallery';
+@use './layout/product';
+//
+@use './components/nav';
+@use './components/cart';
+@use './components/form';
+@use './components/modal';

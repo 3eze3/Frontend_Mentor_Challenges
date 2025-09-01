@@ -1,0 +1,74 @@
+@use '../abstract/mixins' as mx;
+.header {
+	width: 100%;
+	border-bottom: 2px solid #17171714;
+	margin-bottom: 5.5rem;
+	padding-bottom: 2rem;
+
+	@include mx.mobile(459px) {
+		margin-bottom: 0.5rem;
+		padding: 1rem;
+		border-bottom: none;
+	}
+	@include mx.flex($direction: row, $gap: 0rem, $justify: space-between);
+	&__container {
+		@include mx.flex($direction: row, $gap: 3.5rem);
+		@include mx.mobile(459px) {
+			gap: 1rem;
+		}
+	}
+
+	&__menu {
+		display: none;
+		@include mx.mobile(459px) {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 1rem;
+			height: 1rem;
+			z-index: 200;
+
+			&-logo {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			&-open {
+				opacity: 1;
+				&-active {
+					opacity: 0;
+				}
+			}
+
+			&-close {
+				opacity: 0;
+				&-active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__logo {
+		@include mx.mobile(459px) {
+			position: relative;
+			z-index: 200;
+			width: 8rem;
+		}
+		width: 9rem;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}

@@ -1,0 +1,221 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.cart {
+	position: relative;
+	@include mx.flex($direction: row, $gap: 2.75rem);
+
+	@include mx.mobile(459px) {
+		@include mx.flex($direction: row, $gap: 1.8rem);
+	}
+
+	&__toggle-btn {
+		background-color: transparent;
+		width: 1.3rem;
+		&:hover > .cart__logo {
+			filter: drop-shadow(0.1rem 0.25rem 0.1rem #15151567);
+			@include mx.mobile(459px) {
+				filter: none;
+			}
+		}
+		position: relative;
+	}
+
+	&__logo {
+		transition: filter 0.155s linear;
+	}
+
+	&__number {
+		position: absolute;
+		background-color: v.$orange;
+		font-family: v.$kumbhsans-bd;
+		font-size: 0.8em;
+		height: fit-content;
+		padding-inline: 0.4rem;
+		border-radius: 1rem;
+		top: -0.4rem;
+		right: 2;
+		color: v.$white;
+		pointer-events: none;
+		z-index: 10;
+		transition: opacity 0.2s ease-in;
+		opacity: 0;
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__profile {
+		width: 3.1rem;
+		@include mx.mobile(459px) {
+			width: 1.5rem;
+		}
+	}
+
+	&__resume {
+		z-index: 50;
+		width: 22rem;
+		height: 0px;
+		display: none;
+		background-color: v.$white;
+		position: absolute;
+		box-shadow: -0.1rem -0.1rem 0.2rem #f6f6f6 inset,
+			0.1rem 0.1rem 0.2rem #f9f9f9 inset;
+		top: 3rem;
+		right: -5rem;
+		border-radius: 0.6rem;
+		padding-block: 1.5rem;
+		transition: height 0.5s ease, display 0.3s ease allow-discrete;
+		@include mx.mobile(459px) {
+			top: 3.5rem;
+			right: -0.2rem;
+		}
+
+		&--open {
+			@include mx.flex($aling: stretch, $justify: space-between);
+			height: 250px;
+			@include mx.mobile(459px) {
+				height:270px;
+				padding-bottom: 9rem;
+			}
+		}
+	}
+
+	&__header {
+		padding-inline: 1.45rem;
+		border-bottom: 2px solid #17171714;
+	}
+
+	&__container {
+		padding-inline: 1.45rem;
+		display: none;
+		opacity: 0;
+		transition: display 0.6s ease-in-out allow-discrete, opacity 0.2s ease;
+		&--open {
+			opacity: 1;
+			@include mx.flex($justify: stretch, $aling: flex-start, $gap: 1.5rem);
+		}
+	}
+
+	&__empty {
+		font-family: v.$kumbhsans-bd;
+		text-align: center;
+		display: block;
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__title {
+		padding-bottom: 1.7rem;
+		display: block;
+		font-family: v.$kumbhsans-bd;
+	}
+
+	&__product {
+		@include mx.flex($direction: row, $justify: space-between, $gap: 0.9rem);
+	}
+
+	&__image {
+		border-radius: 0.2rem;
+		overflow: hidden;
+		width: 3rem;
+	}
+
+	&__wrapper {
+		@include mx.flex($justify: stretch, $gap: 0.4rem, $aling: flex-start);
+	}
+
+	&__name-product {
+		font-family: v.$kumbhsans-lg;
+		color: v.$grayish-blue;
+	}
+
+	&__information-product {
+		font-family: v.$kumbhsans-lg;
+		color: v.$grayish-blue;
+	}
+
+	&__amount-product {
+		font-family: v.$kumbhsans-lg;
+		color: v.$grayish-blue;
+	}
+	&__total-product {
+		font-family: v.$kumbhsans-bd;
+		color: v.$very-dark-blue;
+	}
+
+	&__remove-btn {
+		width: fit-content;
+		height: fit-content;
+	}
+
+	&__checkout-btn {
+		height: 3.5rem;
+		width: 100%;
+		border-radius: 0.5rem;
+		background-color: v.$orange;
+		color: v.$very-dark-blue;
+		font-family: v.$kumbhsans-bd;
+		font-size: 1em;
+		box-shadow: -0.2rem -0.2rem 0.4rem #ff9646c4 inset,
+			0.2rem 0.2rem 0.4rem #06060664;
+		position: relative;
+		overflow: hidden;
+		&:hover .cart__checkout-cover {
+			transform: translateY(0%);
+			height: 100%;
+			width: 100%;
+			border-radius: 0.5rem;
+		}
+
+		&:hover .cart__checkout-label-1 {
+			transform: translateY(-100%);
+			@include mx.mobile(459px) {
+				transform: none;
+			}
+		}
+
+		&:hover .cart__checkout-label-2 {
+			transform: translateY(-100%);
+			@include mx.mobile(459px) {
+				transform: none;
+			}
+		}
+	}
+
+	&__checkout-cover {
+		width: 30%;
+		height: 0%;
+		border-radius: 70%;
+		position: absolute;
+		background-color: v.$pale-orange;
+		z-index: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		transition: transform 0.2s ease-in, height 0.2s ease-in-out,
+			border-radius 0.2s ease-in-out, width 0.2s ease-in-out;
+		@include mx.mobile(459px) {
+			display: none;
+		}
+	}
+
+	&__checkout-label {
+		position: relative;
+		padding-block: 0.25rem;
+		display: block;
+		overflow: hidden;
+		z-index: 10;
+		transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+		&-2 {
+			position: absolute;
+			color: v.$orange;
+			width: 100%;
+
+			@include mx.mobile(459px) {
+				display: none;
+			}
+		}
+	}
+}

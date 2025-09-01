@@ -1,0 +1,10 @@
+@use '../abstract/mixins' as mx;
+.main {
+	padding-left: 2rem;
+	@include mx.flex($justify: space-between, $direction: row, $gap: 7.5rem);
+
+	@include mx.mobile(459px) {
+		padding: 0rem;
+		@include mx.flex($aling: flex-start, $justify: space-between);
+	}
+}

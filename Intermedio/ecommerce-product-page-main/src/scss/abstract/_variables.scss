@@ -1,0 +1,58 @@
+// --------------------------- Font-Face -----------------------------
+@font-face {
+	font-family: 'KumbhSans-Bold';
+	font-weight: 700;
+	src: local('KumbhSans-Bold'),
+		url('../assets/fonts/KumbhSans-Bold.woff2') format(woff2),
+		url('../assets/fonts/KumbhSans-Bold.woff') format(woff),
+		url('../assets/fonts/KumbhSans-Bold.ttf') format(truetype);
+}
+
+@font-face {
+	font-family: 'KumbhSans-SemiBold';
+	font-weight: 600;
+	src: local('KumbhSans-SemiBold'),
+		url('../assets/fonts/KumbhSans-SemiBold.woff2') format(woff2),
+		url('../assets/fonts/KumbhSans-SemiBold.woff') format(woff),
+		url('../assets/fonts/KumbhSans-SemiBold.ttf') format(truetype);
+}
+
+@font-face {
+	font-family: 'KumbhSans-Medium';
+	font-weight: 500;
+	src: local('KumbhSans-Medium'),
+		url('../assets/fonts/KumbhSans-Medium.woff2') format(woff2),
+		url('../assets/fonts/KumbhSans-Medium.woff') format(woff),
+		url('../assets/fonts/KumbhSans-Medium.ttf') format(truetype);
+}
+
+@font-face {
+	font-family: 'KumbhSans-Light';
+	font-weight: 300;
+	src: local('KumbhSans-Light'),
+		url('../assets/fonts/KumbhSans-Light.woff2') format(woff2),
+		url('../assets/fonts/KumbhSans-Light.woff') format(woff),
+		url('../assets/fonts/KumbhSans-Light.ttf') format(truetype);
+}
+
+// --------------------------- Family Fonts ---------------------------
+$kumbhsans-bd: 'KumbhSans-Bold';
+$kumbhsans-sm: 'KumbhSans-SemiBold';
+$kumbhsans-md: 'KumbhSans-Medium';
+$kumbhsans-lg: 'KumbhSans-Light';
+
+// --------------------------- Size Fonts -----------------------------
+$mobile: 375px;
+$desktop: 1440px;
+$tablet: 740px;
+// --------------------------- Colors ---------------------------------
+// ### Primary
+$orange: #ff7d1a;
+$pale-orange: hsl(25, 100%, 94%);
+
+// ### Neutral
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 5%, 49%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);

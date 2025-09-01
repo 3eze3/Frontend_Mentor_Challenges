@@ -1,0 +1,98 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	@include mx.mobile(459px) {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+	padding-block: 1.9rem;
+	max-width: 1100px;
+	margin: auto;
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	font-family: v.$kumbhsans-md;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-family: v.$kumbhsans-sm;
+	color: v.$dark-grayish-blue;
+	font-size: 0.8em;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	@include mx.mobile(459px) {
+		font-size: 0.7em;
+	}
+}
+
+h2 {
+	font-family: v.$kumbhsans-bd;
+	font-size: 2.65em;
+	color: v.$very-dark-blue;
+	line-height: 1.1;
+	@include mx.mobile(459px) {
+	font-size: 2em;
+	}
+}
+
+p {
+	font-family: v.$kumbhsans-md;
+	color: v.$grayish-blue;
+	font-size: 1em;
+	line-height: 1.55;
+}
+
+a {
+	font-family: v.$kumbhsans-lg;
+	font-size: 0.95em;
+	color: v.$dark-grayish-blue;
+	&:hover {
+		color: v.$orange;
+	}
+}
+
+.product__price {
+	font-family: v.$kumbhsans-bd;
+	letter-spacing: 0.06em;
+	font-size: 1.6em;
+	color: v.$very-dark-blue;
+}
+
+.product__discount {
+	background-color: v.$very-dark-blue;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.5rem;
+}
+
+.product__discount-value {
+	color: v.$white;
+	font-size: 1em;
+}
+
+.product__original-price {
+	font-size: 1.1em;
+	color: v.$dark-grayish-blue;
+	text-decoration: line-through;
+}
+
+.product__discount-value,
+.product__original-price {
+	font-family: v.$kumbhsans-bd;
+}
+
+button {
+	color: v.$orange;
+	cursor: pointer;
+}
+
+.form__add-product {
+	font-size: 1.1em;
+	font-family: v.$kumbhsans-bd;
+	border-radius: 0.75rem;
+	background-color: v.$orange;
+	color: v.$very-dark-blue;
+}
