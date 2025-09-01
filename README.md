@@ -75,20 +75,8 @@ Each project follows the original design files provided by Frontend Mentor. Some
 - **[Sing Up Component](./Junior/sing-up-component-main/)**
 - **[Testimonials Grid](./Junior/Testimonials-Grid-main/)**
 - **[Testimonials Slider Page](./Junior/Testimonials-Slider-Page-main/)**
-  > ⏳ More junior projects coming soon...
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
+
+> ⏳ More junior projects coming soon...
 
 ### 🟠 **Intermediate Projects**
 
@@ -97,18 +85,8 @@ Each project follows the original design files provided by Frontend Mentor. Some
 - **[Ecommerce Product Page](./Intermedio/ecommerce-product-page-main/)**
 - **[Calculator App](./Intermedio/calculator-app-main/)**
 - **[Chat Page Main](./Intermedio/Page-Chat-main/)**
-  > 🛠 More intermediate projects are in progress...
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
-- **[]()**
+
+> 🛠 More intermediate projects are in progress...
 
 ---
 
@@ -117,9 +95,6 @@ Each project follows the original design files provided by Frontend Mentor. Some
 > Coming soon...
 
 - _(Empty for now – to be filled as I progress)_
-- **[]()**
-- **[]()**
-- **[]()**
 
 ---
 
