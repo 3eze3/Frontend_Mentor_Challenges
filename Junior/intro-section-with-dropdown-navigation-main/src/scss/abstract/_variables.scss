@@ -1,0 +1,30 @@
+// --------------------------- Font-Face -----------------------------
+@font-face {
+	font-family: 'Epilogue Bold';
+	font-weight: 700;
+	src: local('Epilogue Bold'),
+		url('../assets/fonts/Epilogue-Bold.woff2') format(woff2),
+		url('../assets/fonts/Epilogue-Bold.woff') format(woff),
+		url('../assets/fonts/Epilogue-Bold.ttf') format(truetype);
+}
+@font-face {
+	font-family: 'Epilogue Medium';
+	font-weight: 500;
+	src: local('Epilogue Medium'),
+		url('../assets/fonts/Epilogue-Medium.woff2') format(woff2),
+		url('../assets/fonts/Epilogue-Medium.woff') format(woff),
+		url('../assets/fonts/Epilogue-Medium.ttf') format(truetype);
+}
+// --------------------------- Family Fonts ---------------------------
+$epilogue-bd: 'Epilogue Bold';
+$epilogue-md: 'Epilogue Medium';
+// --------------------------- Size Fonts -----------------------------
+$mobile: 550px;
+$desktop: 1440px;
+$tablet: 740px;
+$size-paragraph: 18px;
+// --------------------------- Colors ---------------------------------
+
+$almost-white: hsl(0, 0%, 98%);
+$medium-gray: hsl(0, 0%, 41%);
+$almost-black: hsl(0, 0%, 8%);

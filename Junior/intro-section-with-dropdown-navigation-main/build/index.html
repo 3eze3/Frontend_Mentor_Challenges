@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/icons/favicon-32x32.png" />
+
+		<title>Intro section with dropdown navigation</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/index.mjs"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__wrapper">
+				<img
+					class="header__logo"
+					src="./assets/images/icons/logo.svg"
+					alt="Company snap" />
+				<button class="header__btn">
+					<img
+						class="header__icon header__icon--open"
+						src="./assets/images/icons/icon-menu.svg"
+						alt="Open Menu" />
+					<img
+						class="header__logo header__icon--close"
+						src="./assets/images/icons/icon-close-menu.svg"
+						alt="Open Menu" />
+				</button>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item nav__item--extend" aria-haspopup="menu">
+							<button
+								class="nav__btn"
+								id="toogle-features"
+								aria-label="Toogle buttton sublist"
+								aria-expanded="false"
+								aria-controls="features-sublist">
+								<span class="nav__link"> Features </span>
+								<img
+									class="nav__img"
+									src="./assets/images/icons/icon-arrow-down.svg"
+									alt
+									aria-hidden="true" />
+							</button>
+							<ul
+								class="sublist sublist--features"
+								id="features-sublist"
+								role="menu">
+								<li class="sublist__item" role="none">
+									<img
+										class="sublist__img"
+										src="./assets/images/icons/icon-todo.svg"
+										alt
+										aria-hidden="true" />
+									<a class="sublist__link" href="#" role="menuitem">
+										Todo List
+									</a>
+								</li>
+								<li class="sublist__item" role="none">
+									<img
+										class="sublist__img"
+										src="./assets/images/icons/icon-calendar.svg"
+										alt
+										aria-hidden="true" />
+									<a class="sublist__link" href="#" role="menuitem">Calendar</a>
+								</li>
+								<li class="sublist__item" role="none">
+									<img
+										class="sublist__img"
+										src="./assets/images/icons/icon-reminders.svg"
+										alt
+										aria-hidden="true" />
+									<a class="sublist__link" href="#" role="menuitem">
+										Reminders
+									</a>
+								</li>
+								<li class="sublist__item" role="none">
+									<img
+										class="sublist__img"
+										src="./assets/images/icons/icon-planning.svg"
+										alt
+										aria-hidden="true" />
+									<a class="sublist__link" href="#" role="menuitem">Planning</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav__item nav__item--extend" aria-haspopup="menu">
+							<button
+								class="nav__btn"
+								id="toogle-company"
+								aria-label="Toogle buttton sublist"
+								aria-expanded="false"
+								aria-controls="company-sublist">
+								<span class="nav__link">Company </span>
+								<img
+									class="nav__img"
+									src="./assets/images/icons/icon-arrow-down.svg"
+									alt
+									aria-hidden="true" />
+							</button>
+							<ul
+								class="sublist sublist--company"
+								id="company-sublist"
+								role="menu">
+								<li class="sublist__item" role="none">
+									<a class="sublist__link" href="#" role="menuitem">History</a>
+								</li>
+								<li class="sublist__item" role="none">
+									<a class="sublist__link" href="#" role="menuitem">Our Team</a>
+								</li>
+								<li class="sublist__item" role="none">
+									<a class="sublist__link" href="#" role="menuitem">Blog</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
+						<li class="nav__item"><a class="nav__link" href="#">About</a></li>
+					</ul>
+
+					<div class="header__auth">
+						<button class="header__auth-btn header__auth-btn--login">
+							<span class="header__auth-text">
+								<span class="header__auth-text header__auth-text--1">
+									Login
+								</span>
+								<span
+									class="header__auth-text header__auth-text--2"
+									aria-hidden="true">
+									Login
+								</span>
+							</span>
+						</button>
+
+						<button class="header__auth-btn header__auth-btn--register">
+							<span class="header__cover"></span>
+							<span class="header__auth-text">
+								<span class="header__auth-text header__auth-text--1">
+									Register
+								</span>
+								<span class="header__auth-text header__auth-text--2">
+									Register
+								</span>
+							</span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main class="main">
+			<section class="main__intro intro">
+				<h1 class="intro__title">Make remote work</h1>
+				<p class="intro__description">
+					Get your team in sync, no matter your location. Streamline processes,
+					create team rituals, and watch productivity soar.
+				</p>
+				<button class="intro__more-btn">
+					<span class="intro__cover"></span>
+					<span class="intro__more-text">
+						<span class="intro__more-text intro__more-text--1">
+							Learn more
+						</span>
+						<span class="intro__more-text intro__more-text--2">
+							Learn more
+						</span>
+					</span>
+				</button>
+				<ul class="intro__brands">
+					<li class="intro__item">
+						<img
+							class="intro__brand"
+							src="./assets/images/ilustration/client-databiz.svg"
+							alt="band databiz icon" />
+					</li>
+					<li class="intro__item">
+						<img
+							class="intro__brand"
+							src="./assets/images/ilustration/client-audiophile.svg"
+							alt="band audiophile icon" />
+					</li>
+					<li class="intro__item">
+						<img
+							class="intro__brand"
+							src="./assets/images/ilustration/client-meet.svg"
+							alt="band meet icon" />
+					</li>
+					<li class="intro__item">
+						<img
+							class="intro__brand"
+							src="./assets/images/ilustration/client-maker.svg"
+							alt="band maker icon" />
+					</li>
+				</ul>
+			</section>
+			<picture class="main__ilustration">
+				<source
+					media="(max-width:550px)"
+					srcset="./assets/images/ilustration/image-hero-mobile.png" />
+				<img
+					class="main__img"
+					src="./assets/images/ilustration/image-hero-desktop.png"
+					alt="ilustration to work in spap img" />
+			</picture>
+		</main>
+	</body>
+</html>

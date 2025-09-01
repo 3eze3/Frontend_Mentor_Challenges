@@ -1,0 +1,95 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.intro {
+	flex-basis: 50%;
+	@include mx.flex($aling: flex-start, $justify: space-between, $gap: 3.35rem);
+	@include mx.mobile(v.$mobile) {
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	&__description {
+		padding-right: 4rem;
+		@include mx.mobile(v.$mobile) {
+			padding-right: 0;
+		}
+	}
+
+	&__items {
+		width: 6rem;
+	}
+
+	&__brands {
+		margin-top: 2.5em;
+		width: 90%;
+		@include mx.flex($direction: row, $justify: space-between, $gap: 0);
+		@include mx.mobile(v.$mobile) {
+			width: 100%;
+			gap: 1rem;
+		}
+	}
+
+	&__more-btn {
+		padding: 1.1rem 2.2rem;
+		border-radius: 0.8rem;
+		overflow: hidden;
+		position: relative;
+		background-color: v.$almost-black;
+		&:hover .intro__more-text--1 {
+			transform: translateY(-100%);
+			@include mx.mobile(v.$mobile) {
+				transform: none;
+			}
+		}
+
+		&:hover .intro__more-text--2 {
+			transform: translateY(-100%);
+			@include mx.mobile(v.$mobile) {
+				transform: none;
+			}
+		}
+
+		&:hover .intro__cover {
+			transform: translateY(0%);
+			height: 100%;
+			width: 100%;
+			@include mx.mobile(v.$mobile) {
+				transform: none;
+			}
+		}
+	}
+
+	&__more-text {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		z-index: 10;
+		transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease-in;
+		color: white;
+		&--2 {
+			position: absolute;
+			width: 100%;
+			color: v.$almost-black;
+			@include mx.mobile(v.$mobile) {
+				display: none;
+			}
+		}
+	}
+
+	&__cover {
+		width: 30%;
+		height: 0%;
+		background-color: rgb(203, 203, 203);
+		position: absolute;
+		z-index: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		transition: transform 0.2s ease-in, height 0.2s ease-in-out,
+			border-radius 0.2s ease-in-out, width 0.2s ease-in-out;
+
+		@include mx.mobile(v.$mobile) {
+			display: none;
+		}
+	}
+}

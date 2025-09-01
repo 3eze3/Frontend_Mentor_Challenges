@@ -1,0 +1,20 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.main {
+	max-width: 1130px;
+	margin-top: 3rem;
+	margin-inline: auto;
+	@include mx.flex($direction: row, $aling: flex-end, $gap: 6.25rem);
+	@include mx.mobile(v.$mobile) {
+		max-width: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+	}
+	&__ilustration {
+		flex-basis: 45%;
+	}
+}

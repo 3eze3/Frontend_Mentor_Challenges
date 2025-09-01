@@ -1,0 +1,65 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	font-family: v.$epilogue-md;
+	background-color: v.$almost-white;
+	padding: 0.6rem 2.9rem;
+	padding: 0.6rem 2.9rem;
+	@include mx.mobile(v.$mobile) {
+		padding: 1rem 0.6rem;
+	}
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-family: v.$epilogue-bd;
+	font-size: 5.15em;
+	color: v.$almost-black;
+	text-shadow: 0.1rem 0.1rem 0.3rem #1717171d;
+	@include mx.mobile(v.$mobile) {
+		text-align: center;
+		font-size: 1.9em;
+	}
+}
+
+p {
+	font-size: v.$size-paragraph;
+	color: v.$medium-gray;
+	line-height: 1.5;
+
+	@include mx.mobile(v.$mobile) {
+		text-align: center;
+		font-size: 0.9em;
+	}
+}
+
+.nav__link,
+.sublist__link {
+	font-size: 0.9em;
+	color: v.$medium-gray;
+	transition: color 0.13s ease-in, filter 0.13s ease-in;
+	font-weight: 500;
+	&:hover {
+		color: v.$almost-black;
+	}
+	&:hover + img {
+		filter: brightness(0%);
+	}
+}
+.header__auth-text {
+	font-size: 0.95em;
+	color: v.$medium-gray;
+}
+
+span,
+a {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}

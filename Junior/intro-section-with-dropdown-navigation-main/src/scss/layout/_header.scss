@@ -1,0 +1,132 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.header {
+	min-height: 4rem;
+	@include mx.flex($direction: row, $justify: space-between, $gap: 0);
+	&__logo {
+		width: 5.25rem;
+	}
+
+	&__wrapper {
+		width: 100%;
+		@include mx.flex($direction: row, $justify: flex-start, $gap: 3.8rem);
+		@include mx.mobile(v.$mobile) {
+			@include mx.flex($direction: row, $justify: space-between, $gap: 0);
+		}
+	}
+
+	&__btn {
+		width: 3rem;
+		width: 2.5rem;
+		position: relative;
+		z-index: 20;
+		cursor: pointer;
+		perspective: 100em;
+		transform-origin: center right;
+		transform-style: preserve-3d;
+		transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		display: none;
+		@include mx.mobile(v.$mobile) {
+			@include mx.flex($direction: row, $gap: 0rem);
+			&--active {
+				transform: translateX(-100%) rotateY(-180deg);
+				transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			}
+		}
+	}
+
+	&__icon {
+		backface-visibility: hidden;
+		position: absolute;
+		width: 100%;
+		&--open {
+			transform: rotate(0deg);
+		}
+		&--close {
+			opacity: 0;
+			transition: opacity 0.7s ease;
+			transform: rotate(180deg);
+			&--active {
+				opacity: 1;
+				transition: opacity 2s ease-in-out;
+			}
+		}
+	}
+
+	&__auth {
+		@include mx.flex($direction: row, $gap: 1.5rem);
+
+		@include mx.mobile(v.$mobile) {
+			width: 100%;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+
+		&-btn {
+			padding: 0.8rem 1.3rem;
+			border-radius: 0.8rem;
+			@include mx.mobile(v.$mobile) {
+				padding: 0.8rem 3.8rem;
+			}
+			&:hover .header__auth-text--1 {
+				transform: translateY(-100%);
+				@include mx.mobile(v.$mobile) {
+					transform: none;
+				}
+			}
+
+			&:hover .header__auth-text--2 {
+				transform: translateY(-100%);
+				@include mx.mobile(v.$mobile) {
+					transform: none;
+				}
+			}
+			&--register {
+				overflow: hidden;
+				position: relative;
+				outline: solid v.$medium-gray 2px;
+				&:hover .header__cover {
+					transform: translateY(0%);
+					height: 100%;
+					width: 100%;
+					@include mx.mobile(v.$mobile) {
+						transform: none;
+					}
+				}
+			}
+		}
+
+		&-text {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			z-index: 10;
+			transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+				color 0.3s ease-in;
+			&--2 {
+				position: absolute;
+				width: 100%;
+				color: v.$almost-black;
+				@include mx.mobile(v.$mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+	&__cover {
+		width: 30%;
+		height: 0%;
+		background-color: rgb(203, 203, 203);
+		position: absolute;
+		z-index: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		transition: transform 0.2s ease-in, height 0.2s ease-in-out,
+			border-radius 0.2s ease-in-out, width 0.2s ease-in-out;
+
+		@include mx.mobile(v.$mobile) {
+			display: none;
+		}
+	}
+}

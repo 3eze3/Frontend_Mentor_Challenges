@@ -1,0 +1,65 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.sublist {
+	position: absolute;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0.1rem 0.1rem 0.2rem #1717173b;
+	border-radius: 0.5rem;
+	padding: 1.5rem;
+	top: 2rem;
+	right: 0rem;
+	transition: opacity 0.2s ease;
+	@include mx.mobile(v.$mobile) {
+		background-color: transparent;
+		box-shadow: none;
+		padding: 0.01rem;
+		top: 0;
+		right: 0rem;
+		left: 1rem;
+		position: relative;
+	}
+
+	@include mx.flex($aling: flex-start, $justify: space-between, $gap: 1rem);
+
+	&--features {
+		width: 10rem;
+		opacity: 0;
+		@include mx.mobile(v.$mobile) {
+			width: fit-content;
+			display: none;
+		}
+
+		&-active {
+			opacity: 1;
+			@include mx.mobile(v.$mobile) {
+				opacity: 1;
+				display: block;
+			}
+		}
+
+	}
+
+	&--company {
+		right: -2.2rem;
+		opacity: 0;
+		@include mx.mobile(v.$mobile) {
+			display: none;
+		}
+		&-active {
+			opacity: 1;
+			@include mx.mobile(v.$mobile) {
+				opacity: 1;
+				display: block;
+			}
+		}
+	}
+
+	&__item {
+		width: 100%;
+		@include mx.flex($direction: row, $justify: flex-start, $gap: 1rem);
+	}
+
+	&__img {
+		width: 1rem;
+	}
+}

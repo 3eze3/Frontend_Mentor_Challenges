@@ -1,0 +1,62 @@
+@use '../abstract/mixins' as mx;
+@use '../abstract/variables' as v;
+.nav {
+	height: 100%;
+	width: 100%;
+
+	@include mx.flex($justify: space-between, $gap: 0rem, $direction: row);
+
+	@include mx.mobile(550px) {
+		padding: 5rem 1.3rem;
+		position: fixed;
+		top: 0;
+		right: 0;
+		transform: translateX(100rem);
+		transition: transform 1s ease-in-out;
+		height: 100%;
+		width: 60%;
+		z-index: 10;
+		background-color: color-mix(in srgb, #ffffff 70%, rgb(248, 254, 253) 100%);
+		box-shadow: 0rem -7rem 3.5rem 0.1rem rgba(194, 237, 237, 0.391) inset,
+			0.1rem -0.1rem 0.5rem 0.1rem white;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		&--active {
+			transform: translateX(0rem);
+			transition: transform 1s ease-in-out;
+		}
+	}
+
+	&__list {
+		@include mx.flex($direction: row, $gap: 2.4rem);
+		@include mx.mobile(v.$mobile) {
+			@include mx.flex($aling: flex-start, $gap: 1.5rem);
+			z-index: 19;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__item {
+		&--extend {
+			position: relative;
+			@include mx.mobile(v.$mobile) {
+				@include mx.flex($aling: flex-start, $gap: 1rem);
+			}
+		}
+	}
+
+	&__btn {
+		@include mx.flex($direction: row, $gap: 0.45rem);
+	}
+
+	&__img {
+		width: 0.6rem;
+		@include mx.mobile(v.$mobile) {
+			transition: transform 0.12s ease;
+			&-active {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
