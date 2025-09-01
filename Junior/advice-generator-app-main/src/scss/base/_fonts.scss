@@ -1,0 +1,41 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	display: grid;
+	place-content: center;
+	padding-bottom: 3rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: v.$blue-950;
+	font-family: v.$manrope-ebd;
+	@include mx.mobile(v.$mobile) {
+		padding: 1rem;
+	}
+}
+
+h1 {
+	font-size: 0.77em;
+	color: v.$Green-300;
+	letter-spacing: 0.4em;
+}
+
+p {
+	text-align: center;
+	font-size: v.$size-quote;
+	color: v.$blue-200;
+	padding-right: 0.38rem;
+	@include mx.mobile(v.$mobile) {
+		font-size: 22px;
+	}
+}
+
+span {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}

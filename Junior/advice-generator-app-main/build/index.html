@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<title>Advice generator app</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/index.mjs"></script>
+	</head>
+	<body>
+		<main class="main">
+			<h1 class="main__title">
+				ADVICE <span class="main__advice-id">#177</span>
+			</h1>
+			<p class="main__quote">
+				"It is easy sit up and take notice, what's difficult is getting up and
+				taking action."
+			</p>
+
+			<picture class="main__picture">
+				<source
+					media="(max-width:550px)"
+					srcset="./assets/images/pattern-divider-mobile.svg" />
+				<img
+					class="main__divisor"
+					src="./assets/images/pattern-divider-desktop.svg"
+					alt
+					aria-hidden="true" />
+			</picture>
+			<button
+				class="main__btn"
+				aria-label="Generate the next quote"
+				id="next-quote">
+				<img
+					class="main__logo"
+					src="./assets/images/icon-dice.svg"
+					alt
+					aria-hidden="true" />
+			</button>
+		</main>
+	</body>
+</html>

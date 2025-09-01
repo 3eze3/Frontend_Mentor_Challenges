@@ -1,0 +1,129 @@
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+button {
+  font: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Manrope ExtraBold";
+  font-weight: 800;
+  src: local("Manrope ExtraBold"), url("../assets/fonts/Manrope-ExtraBold.woff2") format(woff2), url("../assets/fonts/Manrope-ExtraBold.woff") format(woff), url("../assets/fonts/Manrope-ExtraBold.ttf") format(truetype);
+}
+body {
+  min-height: 100dvh;
+  hyphens: manual;
+  font-smooth: always;
+  display: grid;
+  place-content: center;
+  padding-bottom: 3rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(218, 23%, 16%);
+  font-family: "Manrope ExtraBold";
+}
+@media (width <= 550px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+h1 {
+  font-size: 0.77em;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 0.4em;
+}
+
+p {
+  text-align: center;
+  font-size: 26px;
+  color: hsl(193, 38%, 86%);
+  padding-right: 0.38rem;
+}
+@media (width <= 550px) {
+  p {
+    font-size: 22px;
+  }
+}
+
+span {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  width: 33rem;
+  height: 22rem;
+  padding: 2.5rem 2.5rem 3.5rem;
+  border-radius: 1rem;
+  background-color: hsl(217, 19%, 24%);
+  position: relative;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0rem;
+}
+@media (width <= 550px) {
+  .main {
+    width: 100%;
+    height: 22rem;
+    padding: 0.5rem 0.5rem 2.5rem;
+  }
+}
+.main__btn {
+  position: absolute;
+  padding: 1.25rem;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 2rem;
+  bottom: -2rem;
+  transition: box-shadow 0.15s ease;
+}
+.main__btn:hover {
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(15, 129, 15, 0.439), 0.09rem 0.09rem 0.3rem rgba(0, 98, 0, 0.446), 0.08rem 0.08rem 0.4rem rgba(0, 59, 0, 0.577), 0.07rem 0.07rem 1rem rgba(0, 156, 0, 0.16), 0.06rem 0.06rem 1.6rem rgba(0, 208, 0, 0.22), 0.05rem 0.05rem 1.7rem rgba(0, 255, 0, 0.188);
+}
+
+/*# sourceMappingURL=style.css.map */
