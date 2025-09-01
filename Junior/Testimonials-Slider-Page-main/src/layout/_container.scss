@@ -1,0 +1,71 @@
+@use "../abtract/mixin" as layout;
+.container {
+  width: 200%;
+  min-height: 100vh;
+  @include layout.flex($direction: row);
+  transition: transform 0.2s ease-in;
+  transform: translateX(0%);
+  @include layout.media-break() {
+    width: 220%;
+    @include layout.flex($justify: space-between, $direction: row, $gap: 4rem);
+    padding-block: 3rem;
+    padding-right: 3.1rem;
+    padding-left: 1rem;
+  }
+  &__card {
+    width: calc(100% / 2);
+    position: relative;
+    @include layout.flex($direction: row);
+    @include layout.media-break() {
+      @include layout.flex($direction: column-reverse);
+      padding: 2rem;
+    }
+  }
+  &__testimonial {
+    width: 50%;
+    padding-right: 7rem;
+    position: relative;
+    @include layout.media-break() {
+      width: 100%;
+      padding-right: 0;
+      margin-top: 5rem;
+    }
+    &::before {
+      content: url("../../dist/assets/images/pattern-quotes.svg");
+      position: absolute;
+      top: -5rem;
+      left: 6rem;
+      @include layout.media-break() {
+        top: -2rem;
+        left: 7rem;
+      }
+    }
+  }
+
+  &__imageAuthor {
+    width: 35%;
+    position: relative;
+    @include layout.media-break() {
+      width: 85%;
+    }
+  }
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 0.65rem;
+  }
+  &__decoration {
+    width: 45rem;
+    object-fit: scale-down;
+    position: absolute;
+    top: -4rem;
+    left: -6rem;
+    z-index: -1;
+    @include layout.media-break() {
+      width: 25rem;
+      top: -2.5rem;
+      left: -4rem;
+    }
+  }
+}

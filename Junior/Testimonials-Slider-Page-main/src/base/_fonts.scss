@@ -1,0 +1,61 @@
+@use "../abtract/variable" as colors_bg;
+@use "../abtract/mixin" as layout;
+@font-face {
+  font-family: Inter_light;
+  src: url("../assets/fonts/Inter-Light.ttf");
+}
+@font-face {
+  font-family: Inter_medium;
+  src: url("../assets/fonts/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: Inter_bold;
+  src: url("../assets/fonts/Inter-Bold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-size: 32px;
+  font-family: Inter_light;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: colors_bg.$lg;
+  font-family: Inter_light;
+  color: colors_bg.$dark-blue;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  @include layout.media-break() {
+    font-size: 0.55em;
+    text-align: center;
+  }
+}
+
+span {
+  font-family: Inter_bold;
+  color: colors_bg.$dark-blue;
+  @include layout.media-break() {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+cite {
+  @include layout.media-break() {
+    display: block;
+    text-align: center;
+    font-size: 0.5em;
+  }
+  font-size: colors_bg.$md;
+  font-style: normal;
+  color: colors_bg.$grayish-blue;
+}
+
+button {
+  background-color: transparent;
+}
