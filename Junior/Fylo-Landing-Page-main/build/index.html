@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Fylo landing page with two column layout</title>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <!--  -->
+
+    <link rel="stylesheet" href="resetCss/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">
+        <img src="images/logo.svg" alt="Logo Fylo" />
+      </a>
+      <nav class="header__navbar navbar" aria-label="Main Navigation">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Features</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Team</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="content__introduction introduction">
+        <div class="introduction__wrapper">
+          <h1 class="introduction__title">
+            All your files in one secure location, accessible anywhere.
+          </h1>
+          <p class="introduction__description">
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+          <form action="#" class="introduction__register register">
+            <label class="register__textEmail" for="userEmail">Email:</label>
+            <input
+              class="register__inputEmail"
+              type="email"
+              placeholder="Enter you email..."
+              id="userEmail"
+              required />
+            <button type="submit" class="register__btn">Get Started</button>
+          </form>
+        </div>
+        <div class="introduction__image">
+          <img src="images/illustration-1.svg" alt aria-hidden="true" />
+        </div>
+      </section>
+      <img src="images/bg-curve-desktop.svg" alt aria-hidden="true" />
+      <section class="content__feature feature">
+        <div class="feature__productive">
+          <div class="feature__wrapper">
+            <h2 class="feature__title">Stay productive, wherever you are</h2>
+            <p class="feature__description">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p class="feature__description">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <a href="#" class="feature__link"> See how Fylo works</a>
+
+            <figure class="feature__testimonials testimonials">
+              <div class="testimonials__imageQuote">
+                <img src="images/icon-quotes.svg" alt aria-hidden="true" />
+              </div>
+              <blockquote class="testimonials__quote">
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </blockquote>
+              <figcaption class="testimonials__wrapper">
+                <div class="testimonials__image">
+                  <img
+                    src="images/avatar-testimonial.jpg"
+                    alt="Founder & Ceo Kyle Burton" />
+                </div>
+                <p class="testimonials__author">
+                  <cite class="testimonials__name">Kyle Burton</cite>
+                  <small class="testimonials__occupation"
+                    >Founder & CEO, Huddle</small
+                  >
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="feature__image">
+            <img src="images/illustration-2.svg" alt aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+      <section class="content__access access">
+        <div class="access__wrapper">
+          <div class="access__information">
+            <h3 class="access__title">Get early access today</h3>
+            <p class="access__description">
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <form action="#" class="access__register register">
+            <label class="register__textEmail" for="userEmail--2">Email:</label>
+            <input
+              class="register__inputEmail register__inputEmail--access"
+              type="email"
+              placeholder="Enter you email..."
+              id="userEmail--2"
+              required />
+            <button type="submit" class="register__btn register__btn--access">
+              Get Started For Free
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="content__footer footer">
+      <div class="footer__wraper">
+        <a href="#" class="footer__image">
+          <img src="images/logo.svg" alt="Logo Fylo" class="footer__image" />
+        </a>
+        <div class="footer__containerContacts">
+          <div class="footer__contact contact">
+            <address class="contact__wrapper">
+              <a href="#" class="contact__link">
+                <img
+                  src="images/icon-phone.svg"
+                  alt
+                  aria-hidden="true"
+                  class="contact__image" />
+                Phone: +1-543-123-4567
+              </a>
+              <a href="#" class="contact__link">
+                <img
+                  src="images/icon-email.svg"
+                  alt
+                  aria-hidden="true"
+                  class="contact__image" />
+                example@fylo.com
+              </a>
+            </address>
+          </div>
+          <nav class="footer__navbar">
+            <ul class="footer__list">
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Jobs</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Press</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Privacy</a>
+              </li>
+              <li class="footer__iterm">
+                <a href="#" class="footer__link">Blog</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Facebook">
+                  <img src="images/facebook-f.svg" alt aria-hidden="true" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Twitter">
+                  <img src="images/twitter.svg" alt aria-hidden="true" />
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Instagram">
+                  <img src="images/instagram.svg" alt aria-hidden="true" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
