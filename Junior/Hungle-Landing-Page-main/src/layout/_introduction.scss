@@ -1,0 +1,37 @@
+@use "../abstract/minxis" as layout;
+@use "../abstract/varibles" as colors_fonts;
+.introduction {
+  width: 100%;
+  @include layout.flex();
+  margin-inline: auto;
+  &__wrapper {
+    width: 70%;
+    @include layout.flex();
+    gap: 3rem;
+    @include layout.media-breakpoint(480px, max-width) {
+      width: 100%;
+      gap: 1.5rem;
+      padding-inline: 1.75rem;
+    }
+  }
+  &__content {
+    text-align: center;
+    @include layout.flex();
+    gap: 2.15rem;
+    margin-bottom: 5rem;
+  }
+  &__description {
+    width: 55%;
+    font-size: colors_fonts.$size-1-2em;
+    line-height: colors_fonts.$line-heigt-1-4;
+    @include layout.media-breakpoint(480px, max-width) {
+      width: 100%;
+    }
+  }
+  &__ilustration {
+    width: 90%;
+    @include layout.media-breakpoint(480px, max-width) {
+      width: 100%;
+    }
+  }
+}

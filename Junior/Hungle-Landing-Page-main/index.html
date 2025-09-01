@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Huddle landing page with curved sections</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo logo">
+        <img src="asests/images/logo.svg" alt="Logo Page Huddle" />
+      </div>
+      <a href="#" class="header__link">Try It Free</a>
+    </header>
+    <section class="introduction">
+      <div class="introduction__wrapper">
+        <div class="introduction__content">
+          <h1 class="introduction__title">
+            Build The Community Your Fans Will Love
+          </h1>
+          <p class="introduction__description">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button class="btn">Get Started For Free</button>
+        </div>
+        <div class="introduction__ilustration">
+          <img src="asests/images/screen-mockups.svg" alt aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+    <section class="rating">
+      <h2 class="hidden">Rating of the Community</h2>
+      <div class="rating__information rating__information--communities">
+        <span>1.4k+</span>
+      </div>
+      <div class="rating__information rating__information--messages">
+        <span>2.7m+</span>
+      </div>
+    </section>
+    <!-- Cards  -->
+    <main class="cards">
+      <article class="cards__card">
+        <div class="cards__wrapper">
+          <h3 class="cards__title">Grow Together</h3>
+          <p class="cards__description">
+            Generate meanigful discussion with your audience and build a strong,
+            loyal community. Think of the insighful coversations you miss out on
+            with a feedback form.
+          </p>
+        </div>
+        <div class="cards__image">
+          <img
+            src="asests/images/illustration-grow-together.svg"
+            alt="illustration of people talking and growing together" />
+        </div>
+      </article>
+      <article class="cards__card">
+        <div class="cards__wrapper">
+          <h3 class="cards__title">Flowing Conversations</h3>
+          <p class="cards__description">
+            You wouldn't conversation in real life, so why do it online? Our
+            threads have just-in-time loading for a more natural flow.
+          </p>
+        </div>
+        <div class="cards__image">
+          <img
+            src="asests/images/illustration-flowing-conversation.svg"
+            alt="illustration of people talking and growing together" />
+        </div>
+      </article>
+      <article class="cards__card">
+        <div class="cards__wrapper">
+          <h3 class="cards__title">Your Users</h3>
+          <p class="cards__description">
+            It takes no tme at all to integrate Huddle with your app's
+            authentication solution. This means once signed in to your app, your
+            users can start chatting immediately.
+          </p>
+        </div>
+        <div class="cards__image">
+          <img
+            src="asests/images/illustration-your-users.svg"
+            alt="illustration of people talking and growing together" />
+        </div>
+      </article>
+    </main>
+    <div class="build">
+      <h2 class="bulid__title">Ready To Build Your Community?</h2>
+      <button class="build__btn btn">Get Started For Free</button>
+    </div>
+    <footer class="footer">
+      <section class="footer__wrapper">
+        <h2 class="hidden">Social links And Subscription</h2>
+        <div class="footer__content">
+          <div class="footer__logo logo">
+            <img src="asests/images/logo.svg" alt="Logo Huddle" />
+          </div>
+          <p class="footer__information">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mauris
+            nulla quam, hendrerlt lacinia vestibulum a , ultrices quis sem.
+          </p>
+          <address class="footer__social">
+            <p class="footer__contact footer__contact--phone">
+              Phone:+1-543-123-4567
+            </p>
+            <a href="#" class="footer__contact footer__contact--email"
+              >example@huddle.com</a
+            >
+          </address>
+        </div>
+        <div class="footer__content">
+          <h4 class="footer__title">NEWSLETTER</h4>
+          <p class="footer__information">
+            To recive tips on how to grow your community sing up to our weekly
+            newsletter. We'll never send you spam or pass on your emain address
+          </p>
+          <form action="#" class="footer__form">
+            <label class="footer__textSub" for="register">Subscribe here</label>
+            <input class="footer__input" type="email" id="register" required />
+            <button type="submit" class="footer__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="#" aria-label="Facebook">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#" aria-label="Twitter">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

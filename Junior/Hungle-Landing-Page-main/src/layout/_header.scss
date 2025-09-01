@@ -1,0 +1,44 @@
+@use "../abstract/minxis" as layout_bxsh;
+@use "../abstract/varibles" as colors;
+.header {
+  max-width: 93rem;
+  min-height: 13rem;
+  @include layout_bxsh.flex($justify: space-between, $direction: row);
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  margin-inline: auto;
+  margin-bottom: 8rem;
+  @include layout_bxsh.media-breakpoint(480px, max-width) {
+    max-width: 100%;
+    min-height: 5rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    margin-bottom: 10rem;
+  }
+  &__link {
+    border: solid colors.$pink 0.125rem;
+    padding: 0.6rem 2rem;
+    color: colors.$pink;
+    @include layout_bxsh.shadow-neo(0.03rem, colors.$pink);
+    border-radius: 1.3rem;
+    -webkit-border-radius: 1.3rem;
+    -moz-border-radius: 1.3rem;
+    -ms-border-radius: 1.3rem;
+    -o-border-radius: 1.3rem;
+
+    @include layout_bxsh.media-breakpoint(480px, max-width) {
+      padding: 0.3rem 1.4rem;
+    }
+    &:hover {
+      border: solid colors.$light-pink 0.125rem;
+      color: colors.$light-pink;
+      @include layout_bxsh.shadow-neo(0.03rem, colors.$light-pink);
+    }
+  }
+}
+.logo {
+  width: 14rem;
+  @include layout_bxsh.media-breakpoint(480px, max-width) {
+    width: 8rem;
+  }
+}
