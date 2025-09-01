@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="assets/dist/main.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__card card">
+        <h1 class="card__title card__title--hidden">Results of the Test</h1>
+        <article class="card__wrapper card__wrapper--result">
+          <h2 class="card__title card__title--resultHeading">Your Result</h2>
+          <div class="card__circle">
+            <div class="card__score">
+              <span class="card__scoredReached">76</span>
+              <span class="card__maxScore">of 100</span>
+            </div>
+          </div>
+          <div class="card__content">
+            <h3 class="card__subtitle">Great</h3>
+            <p class="card__descriptionResult">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </article>
+        <article class="card__wrapper card__wrapper--summary">
+          <h2 class="card__title card__title--resultSummary">Summary</h2>
+          <ul class="card__scoredList">
+            <li class="card__categorie card__categorie--reaction">
+              <div class="card__categorieContent">
+                <span class="card__categorieName card__categorieName--reaction"
+                  >Reaction</span
+                >
+                <span class="card__categoriePoints">80</span>
+              </div>
+            </li>
+            <li class="card__categorie card__categorie--memory">
+              <div class="card__categorieContent">
+                <span class="card__categorieName card__categorieName--memory"
+                  >Memory</span
+                >
+                <span class="card__categoriePoints">92</span>
+              </div>
+            </li>
+            <li class="card__categorie card__categorie--verbal">
+              <div class="card__categorieContent">
+                <span class="card__categorieName card__categorieName--verbal"
+                  >Verbal</span
+                >
+                <span class="card__categoriePoints">61</span>
+              </div>
+            </li>
+            <li class="card__categorie card__categorie--visual">
+              <div class="card__categorieContent">
+                <span class="card__categorieName card__categorieName--visual"
+                  >Visual</span
+                >
+                <span class="card__categoriePoints">72</span>
+              </div>
+            </li>
+          </ul>
+          <button class="card__btn">Continue</button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
