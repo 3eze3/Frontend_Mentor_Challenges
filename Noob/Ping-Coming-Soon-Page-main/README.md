@@ -1,6 +1,6 @@
 # Frontend Mentor - Ping coming soon page
 
-![Design preview for the Ping coming soon page coding challenge](dist/assets/images/desktop-preview.jpg)
+![Design preview for the Ping coming soon page coding challenge](./build/assets/images/desktop-preview.jpg)
 
 ## Welcome! 👋
 
