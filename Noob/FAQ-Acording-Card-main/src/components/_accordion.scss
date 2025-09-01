@@ -1,0 +1,49 @@
+@use "../abtract/variables" as colors_bg;
+@use "../abtract/mixins" as layout;
+.accordion {
+  padding-inline: 1rem;
+  &__head {
+    margin-bottom: 0.5rem;
+    @include layout.flex($justify: space-between, $gap: 0);
+    cursor: pointer;
+  }
+  &__box {
+    margin-bottom: 2.25rem;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: colors_bg.$light-grayish-blue;
+      width: 99.5%;
+      height: 1px;
+    }
+  }
+  &__question {
+    pointer-events: none;
+    &--active {
+      font-weight: 600;
+    }
+  }
+
+  &__arrow {
+    pointer-events: none;
+    transition: 0.3s ease;
+    &--active {
+      transform: rotateX(160deg);
+      transition: 0.3s ease;
+    }
+  }
+
+  &__description {
+    height: 0;
+    padding-block: 0;
+    overflow: hidden;
+    transition: 0.25s ease;
+    &--active {
+      height: 4rem;
+      padding-block: 0.25rem;
+      transition: 0.25s ease;
+    }
+  }
+}
