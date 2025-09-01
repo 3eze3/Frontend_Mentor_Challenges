@@ -1,0 +1,23 @@
+@use "../abtract/mixin" as layout;
+.content {
+  @include layout.flex($aling: flex-start, $gap: 1rem);
+  padding: 0.5rem;
+  &__wrapper {
+    max-width: 10rem;
+    @include layout.flex($aling: flex-start, $gap: 0.25rem);
+    &--left {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+  }
+  &__images {
+    @include layout.flex($justify: flex-end, $direction: row, $gap: 0.5rem);
+  }
+  &__image {
+    width: 3.5rem;
+    border-radius: 1rem;
+  }
+  &__opcions {
+    max-width: fit-content;
+  }
+}

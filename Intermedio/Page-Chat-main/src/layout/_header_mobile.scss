@@ -1,0 +1,49 @@
+@use "../abtract/mixin" as layout;
+@use "../abtract/variable" as colors_bg;
+.mobile {
+  &__perfil {
+    min-height: 6rem;
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    background-image: linear-gradient(
+      90deg,
+      colors_bg.$light-violet,
+      colors_bg.$light-magenta
+    );
+    border-radius: 0.5rem;
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+    @include layout.flex($justify: space-between, $direction: row, $gap: 0);
+  }
+  &__information {
+    @include layout.flex($direction: row, $gap: 0.1rem);
+  }
+  &__back {
+    width: 1.5rem;
+    filter: brightness(100%) invert(1);
+  }
+  &__wrapper {
+    @include layout.flex($justify: flex-start, $direction: row, $gap: 0.75rem);
+  }
+  &__avatar {
+    width: 2.15rem;
+    border-radius: 50%;
+    border: solid 2px colors_bg.$very-light-magenta;
+  }
+  &__userInformation {
+    @include layout.flex($aling: flex-start, $gap: 0.25rem);
+  }
+  &__name {
+    font-size: 0.8em;
+  }
+  &__status {
+    font-size: 0.6em;
+    color: colors_bg.$pale-violet;
+  }
+
+  &__settings {
+    width: 1.25rem;
+    filter: brightness(100%) invert(1);
+  }
+}
