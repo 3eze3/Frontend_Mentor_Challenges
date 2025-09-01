@@ -1,0 +1,86 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+body {
+	min-height: 100dvh;
+	hyphens: manual;
+	font-smooth: always;
+	padding-block: 4rem;
+	display: grid;
+	place-content: center;
+	@include mx.mobile(v.$mobile) {
+		padding: 0rem;
+	}
+	background-color: v.$very-light-grayish-blue;
+	font-family: v.$plusjakartasans-md;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: 1.5em;
+	@include mx.mobile(v.$mobile) {
+		font-size: 1.14em;
+	}
+}
+
+p {
+	color: v.$dark-grayish-blue;
+	@include mx.mobile(v.$mobile) {
+		font-size: 0.8em;
+	}
+}
+
+time {
+	color: v.$grayish-blue;
+	@include mx.mobile(v.$mobile) {
+		font-size: 0.8em;
+	}
+}
+
+a {
+	transition: color 0.14s ease;
+	&:hover {
+		color: v.$grayish-blue;
+	}
+}
+
+h1,
+a {
+	color: v.$very-dark-blue;
+}
+
+.header__number {
+	background-color: v.$blue;
+	color: v.$white;
+	font-size: 0.65em;
+}
+
+.notification__post {
+	font-family: v.$plusjakartasans-ebd;
+	transition: color 0.14s ease;
+	&-club {
+		color: v.$blue;
+	}
+	&-publish {
+		color: v.$dark-grayish-blue;
+	}
+
+	&:hover {
+		color: v.$very-dark-blue;
+		cursor: pointer;
+	}
+}
+
+.header__btn {
+	font-family: v.$plusjakartasans-md;
+	@include mx.mobile(v.$mobile) {
+		font-size: 0.9em;
+	}
+}
+
+h1,
+a,
+.main__number {
+	font-family: v.$plusjakartasans-ebd;
+}

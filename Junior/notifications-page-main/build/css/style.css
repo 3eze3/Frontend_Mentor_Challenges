@@ -1,0 +1,362 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style: none;
+}
+
+ol {
+  counter-reset: revert;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+button {
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans ExtraBold";
+  font-weight: 800;
+  src: local("PlusJakartaSans-ExtraBold"), url("../assets/fonts/PlusJakartaSans-ExtraBold.woff2") format(woff2), url("../assets/fonts/PlusJakartaSans-ExtraBold.woff") format(woff), url("../assets/fonts/PlusJakartaSans-ExtraBold.ttf") format(truetype);
+}
+@font-face {
+  font-family: "PlusJakartaSans Medium";
+  font-weight: 500;
+  src: local("PlusJakartaSans-Medium"), url("../assets/fonts/PlusJakartaSans-Medium.woff2") format(woff2), url("../assets/fonts/PlusJakartaSans-Medium.woff") format(woff), url("../assets/fonts/PlusJakartaSans-Medium.ttf") format(truetype);
+}
+body {
+  min-height: 100dvh;
+  hyphens: manual;
+  font-smooth: always;
+  padding-block: 4rem;
+  display: grid;
+  place-content: center;
+  background-color: hsl(210, 60%, 98%);
+  font-family: "PlusJakartaSans Medium";
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (width <= 550px) {
+  body {
+    padding: 0rem;
+  }
+}
+
+h1 {
+  font-size: 1.5em;
+}
+@media (width <= 550px) {
+  h1 {
+    font-size: 1.14em;
+  }
+}
+
+p {
+  color: hsl(219, 12%, 42%);
+}
+@media (width <= 550px) {
+  p {
+    font-size: 0.8em;
+  }
+}
+
+time {
+  color: hsl(219, 14%, 63%);
+}
+@media (width <= 550px) {
+  time {
+    font-size: 0.8em;
+  }
+}
+
+a {
+  transition: color 0.14s ease;
+}
+a:hover {
+  color: hsl(219, 14%, 63%);
+}
+
+h1,
+a {
+  color: hsl(224, 21%, 14%);
+}
+
+.header__number {
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.65em;
+}
+
+.notification__post {
+  font-family: "PlusJakartaSans ExtraBold";
+  transition: color 0.14s ease;
+}
+.notification__post-club {
+  color: hsl(219, 85%, 26%);
+}
+.notification__post-publish {
+  color: hsl(219, 12%, 42%);
+}
+.notification__post:hover {
+  color: hsl(224, 21%, 14%);
+  cursor: pointer;
+}
+
+.header__btn {
+  font-family: "PlusJakartaSans Medium";
+}
+@media (width <= 550px) {
+  .header__btn {
+    font-size: 0.9em;
+  }
+}
+
+h1,
+a,
+.main__number {
+  font-family: "PlusJakartaSans ExtraBold";
+}
+
+.main {
+  background-color: hsl(0, 0%, 100%);
+  width: 45.8rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+@media (width <= 550px) {
+  .main {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 1.2rem;
+  }
+}
+
+.header {
+  width: 100%;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.header__notifications {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.header__number {
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+.header__btn {
+  height: 1rem;
+}
+.header__btn:hover .header__btn-text-1 {
+  transform: translateY(-100%);
+}
+@media (width <= 550px) {
+  .header__btn:hover .header__btn-text-1 {
+    transform: none;
+  }
+}
+.header__btn:hover .header__btn-text-2 {
+  transform: translateY(-100%);
+}
+@media (width <= 550px) {
+  .header__btn:hover .header__btn-text-2 {
+    transform: none;
+  }
+}
+.header__btn-text {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease-in;
+  color: hsl(219, 12%, 42%);
+}
+.header__btn-text-2 {
+  position: absolute;
+  width: 100%;
+  color: hsl(219, 85%, 26%);
+}
+@media (width <= 550px) {
+  .header__btn-text-2 {
+    display: none;
+  }
+}
+
+.notifications__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.notification {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.3rem;
+}
+.notification-active {
+  background-color: hsl(210, 60%, 98%);
+}
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.28rem;
+}
+@media (width <= 550px) {
+  .notification {
+    padding: 0.5rem 0.25rem;
+  }
+}
+.notification__avatar {
+  width: 2.8em;
+}
+@media (width <= 550px) {
+  .notification__avatar {
+    width: 2em;
+  }
+}
+.notification__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.notification__wrapper--comment {
+  width: 100%;
+}
+.notification__wrapper--comment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+}
+@media (width <= 550px) {
+  .notification__wrapper--comment {
+    gap: 0.5rem;
+  }
+}
+.notification__description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+@media (width <= 550px) {
+  .notification__description {
+    display: block;
+  }
+}
+.notification__description--publish {
+  display: block;
+}
+.notification__description-active {
+  position: relative;
+}
+.notification__description-active::after {
+  content: "";
+  display: block;
+  background-color: hsl(1, 90%, 64%);
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  top: 35%;
+  border-radius: 50%;
+  right: -1rem;
+}
+.notification__preview {
+  outline: solid hsl(219, 14%, 63%) 1px;
+  border-radius: 0.15rem;
+  transition: background-color 0.15s ease-in;
+  padding: 1rem;
+  margin-top: 0.6rem;
+}
+.notification__preview:hover {
+  cursor: pointer;
+  background-color: hsl(211, 68%, 94%);
+}
+.notification__img {
+  width: 2.75rem;
+}
+
+/*# sourceMappingURL=style.css.map */

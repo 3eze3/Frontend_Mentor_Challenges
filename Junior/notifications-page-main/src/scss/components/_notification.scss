@@ -1,0 +1,84 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.notification {
+	width: 100%;
+	border-radius: 0.5rem;
+	padding: 1.1rem 1.3rem;
+	&-active {
+		background-color: v.$very-light-grayish-blue;
+	}
+	@include mx.flex(
+		$direction: row,
+		$aling: flex-start,
+		$justify: flex-start,
+		$gap: 1.28rem
+	);
+
+	@include mx.mobile(v.$mobile) {
+		padding: 0.5rem 0.25rem;
+	}
+
+	&__avatar {
+		width: 2.8em;
+		@include mx.mobile(v.$mobile) {
+			width: 2em;
+		}
+	}
+
+	&__wrapper {
+		@include mx.flex($aling: flex-start, $gap: 0.25rem);
+		&--comment {
+			width: 100%;
+			@include mx.flex(
+				$direction: row,
+				$aling: flex-start,
+				$justify: space-between,
+				$gap: 0
+			);
+			@include mx.mobile(v.$mobile) {
+				gap: 0.5rem;
+			}
+		}
+	}
+
+	&__description {
+		@include mx.flex($direction: row, $gap: 0.4rem);
+
+		@include mx.mobile(v.$mobile) {
+			display: block;
+		}
+		&--publish {
+			display: block;
+		}
+		&-active {
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				background-color: v.$red;
+				width: 0.5rem;
+				height: 0.5rem;
+				position: absolute;
+				top: 35%;
+				border-radius: 50%;
+				right: -1rem;
+			}
+		}
+	}
+
+	&__preview {
+		outline: solid v.$grayish-blue 1px;
+		border-radius: 0.15rem;
+		transition: background-color 0.15s ease-in;
+		padding: 1rem;
+		margin-top: 0.6rem;
+		&:hover {
+			cursor: pointer;
+			background-color: v.$light-grayish-blue-1;
+		}
+	}
+
+	&__img {
+		width: 2.75rem;
+	}
+}

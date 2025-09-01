@@ -1,0 +1,6 @@
+@use '../abstract/mixins' as mx;
+.notifications {
+	&__list {
+		@include mx.flex($aling: flex-start, $justify: space-between, $gap: 0.5rem);
+	}
+}

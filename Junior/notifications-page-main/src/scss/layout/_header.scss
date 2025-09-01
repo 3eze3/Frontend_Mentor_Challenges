@@ -1,0 +1,50 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.header {
+	width: 100%;
+	@include mx.flex($direction: row, $justify: space-between, $gap: 0);
+
+	
+	&__notifications {
+		@include mx.flex($direction: row, $gap: 0.7rem);
+	}
+	&__number {
+		padding: 0.2rem 0.7rem;
+		border-radius: 0.4rem;
+		text-align: center;
+	}
+
+	&__btn {
+		height: 1rem;
+		&:hover .header__btn-text-1 {
+			transform: translateY(-100%);
+			@include mx.mobile(v.$mobile) {
+				transform: none;
+			}
+		}
+
+		&:hover .header__btn-text-2 {
+			transform: translateY(-100%);
+			@include mx.mobile(v.$mobile) {
+				transform: none;
+			}
+		}
+		&-text {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			z-index: 10;
+			transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+				color 0.3s ease-in;
+			color: v.$dark-grayish-blue;
+			&-2 {
+				position: absolute;
+				width: 100%;
+				color: v.$blue;
+				@include mx.mobile(v.$mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+}
