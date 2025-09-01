@@ -1,4 +1,4 @@
-# **Frontend Mentor Challenges**
+# **🍔 Frontend Mentor Challenges - Project ARCH**
 
 This repository contains my solutions to various **Frontend Mentor** challenges. These are categorized by difficulty — from **Noob** to **Advanced** — and currently include over **68 projects**.
 
