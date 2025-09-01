@@ -1,0 +1,155 @@
+@use "../abtract/variables" as colors_bg;
+@use "../abtract/mixin" as layout;
+.content {
+  background-color: colors_bg.$very-pale-cyan;
+  border-radius: 8px;
+  padding: 24px 16px;
+  &__summary {
+    margin-top: 41.6px;
+    @include layout.flex($justify: space-between, $direction: row, $gap: 0);
+  }
+  &__container {
+    width: 100%;
+    height: 240px;
+  }
+  &__chart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include layout.flex(
+      $aling: flex-end,
+      $justify: space-between,
+      $direction: row,
+      $gap: 0
+    );
+    margin-bottom: 8px;
+  }
+
+  &__bar {
+    width: 2.5rem;
+    border-radius: 3.2px;
+    background-image: linear-gradient(
+      colors_bg.$soft-green 20%,
+      colors_bg.$very-pale-cyan
+    );
+    background-size: 100% 100%;
+    transition: height 1s ease 0.15s, background-size 1.2s ease 0.15s;
+    cursor: pointer;
+    &:hover {
+      height: 76%;
+      background-size: 100% 240%;
+      transition: height 1s ease 0.15s, background-size 1.2s ease 0.15s;
+    }
+    &--mon {
+      height: 22%;
+      transition: height 1.2s ease 0.15s;
+    }
+    &--tue {
+      height: 50%;
+    }
+    &--wen {
+      height: 75%;
+      background-image: linear-gradient(
+        #547498b7 10%,
+        #a4bac7 35% 80%,
+        rgba(65, 101, 108, 0.727) 90%
+      );
+    }
+    &--thu {
+      height: 43%;
+    }
+    &--fri {
+      height: 35%;
+    }
+    &--sat {
+      height: 64%;
+    }
+    &--sun {
+      height: 39%;
+    }
+  }
+  &__box {
+    width: 4rem;
+    position: absolute;
+    padding: 0.2rem;
+    top: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 1rem #0554;
+    color: #3d3d3d;
+    font-weight: 900;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    &--mon {
+      left: -0.7rem;
+      @include layout.media-break() {
+        left: -0.5rem;
+      }
+    }
+    &--tue {
+      left: 2.7rem;
+      @include layout.media-break() {
+        left: 3.15rem;
+      }
+    }
+    &--wen {
+      left: 6rem;
+      @include layout.media-break() {
+        left: 7.15rem;
+      }
+    }
+    &--thu {
+      left: 9.5rem;
+      @include layout.media-break() {
+        left: 11rem;
+      }
+    }
+    &--fri {
+      left: 12.65rem;
+      @include layout.media-break() {
+        left: 15rem;
+      }
+    }
+    &--sat {
+      left: 16rem;
+      @include layout.media-break() {
+        left: 19.15rem;
+      }
+    }
+    &--sun {
+      left: 19.5rem;
+      @include layout.media-break() {
+        left: 23rem;
+      }
+    }
+  }
+
+  &__days {
+    @include layout.flex($justify: space-between, $direction: row, $gap: 0);
+    padding-right: 6.4px;
+  }
+  &__totalMonth {
+    font-size: 0.75em;
+  }
+
+  &__information {
+    width: 50%;
+    @include layout.flex($aling: flex-end, $gap: 0);
+    align-self: flex-end;
+  }
+  &__divider {
+    width: 100%;
+    height: 0.0625rem;
+    margin-top: 44px;
+    background-color: rgba(4, 3, 67, 0.198);
+  }
+
+  @include layout.media-break() {
+    padding-inline: 36px;
+  }
+}
+.active {
+  opacity: 1;
+  transition: 0.5s ease-in 0.6s;
+}

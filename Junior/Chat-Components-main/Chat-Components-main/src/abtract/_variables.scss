@@ -1,0 +1,25 @@
+// -------------- Primary --------------
+$soft-green: rgb(46, 79, 79);
+// --------------  Neutral --------------
+$dark-brown: hsl(180, 32%, 16%);
+$medium-brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+$very-pale-cyan: #cbe4de;
+$light-green: rgb(80, 127, 127);
+$degrant-bg: linear-gradient(
+  45deg,
+  #2c3333 4%,
+  #536565 5%,
+  #2c3333 20% 78%,
+  #0f3b3bb9 95%,
+  #2c3333 97%
+);
+// --------------  Box shadow --------------
+$shadow-soft-red: 0.22rem 0.22rem 0.44rem rgb(68, 118, 118) inset,
+  -0.22rem -0.22rem 0.5rem hsla(210, 100%, 4%, 0.846) inset;
+// --------------  Font size --------------
+$lg: 1.5em;
+$rm: 1em;
+$md: 0.9em;
+$sm: 0.85rem;

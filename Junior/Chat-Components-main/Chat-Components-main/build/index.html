@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="app/main.js" defer></script>
+    <title>Expenses chart component</title>
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__head head">
+        <div class="head__wrapper">
+          <h1 class="head__title">My balance</h1>
+          <strong class="head__total" aria-label="Current balance price">
+            $921.48
+          </strong>
+        </div>
+        <img
+          class="head__logo"
+          src="assets/images/logo.svg"
+          alt="Balance logo" />
+      </header>
+      <section class="card__content content">
+        <div class="content__wrapper">
+          <h2 class="content__spending">Spending - Last 7 days</h2>
+        </div>
+        <div class="content__container">
+          <div
+            class="content__chart"
+            role="presentation"
+            aria-label="Statistics">
+            <div class="content__box content__box--mon">
+              <span class="content__amount" aria-label="Monday"></span>
+            </div>
+            <div class="content__bar content__bar--mon"></div>
+            <div class="content__box content__box--tue">
+              <span class="content__amount" aria-label="Tuesday"></span>
+            </div>
+            <div class="content__bar content__bar--tue"></div>
+            <div class="content__box content__box--wen">
+              <span class="content__amount" aria-label="Wednesday"></span>
+            </div>
+            <div class="content__bar content__bar--wen"></div>
+            <div class="content__box content__box--thu">
+              <span class="content__amount" aria-label="Thursday"></span>
+            </div>
+            <div class="content__bar content__bar--thu"></div>
+            <div class="content__box content__box--fri">
+              <span class="content__amount" aria-label="Friday"></span>
+            </div>
+            <div class="content__bar content__bar--fri"></div>
+            <div class="content__box content__box--sat">
+              <span class="content__amount" aria-label="Saturday"></span>
+            </div>
+            <div class="content__bar content__bar--sat"></div>
+            <div class="content__box content__box--sun">
+              <span class="content__amount" aria-label="Sunday"></span>
+            </div>
+            <div class="content__bar content__bar--sun"></div>
+          </div>
+          <ul class="content__days">
+            <li class="content__item">mon</li>
+            <li class="content__item">tue</li>
+            <li class="content__item">wed</li>
+            <li class="content__item">thu</li>
+            <li class="content__item">fri</li>
+            <li class="content__item">sat</li>
+            <li class="content__item">sun</li>
+          </ul>
+        </div>
+        <hr class="content__divider" />
+        <div class="content__summary">
+          <div class="content__wrapper">
+            <span class="content__totalMonth">Total this month</span>
+            <span class="content__price" aria-label="Month balance price">
+              $478.33
+            </span>
+          </div>
+          <div class="content__information">
+            <small class="content__percenten"> +2.4%</small>
+            <span class="content__totalMonth"> from last month </span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
