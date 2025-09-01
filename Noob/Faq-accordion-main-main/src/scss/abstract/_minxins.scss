@@ -1,0 +1,23 @@
+@mixin center() {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flex(
+  $aling: center,
+  $justify: center,
+  $direction: column,
+  $gap: 2.5rem
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $aling;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin media-break($media: min-width, $break: 970px) {
+  @media screen and ($media: $break) {
+    @content;
+  }
+}
